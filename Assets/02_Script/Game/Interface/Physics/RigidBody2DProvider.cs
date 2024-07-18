@@ -20,7 +20,7 @@ public class RigidBody2DProvider : ExpansionMonoBehaviour, IPhysics
         if(_rigid != null)
             return _rigid.velocity;
 
-        Debug.LogError("RigidBody가 Null");
+        Debug.LogError("RigidBody is Null");
         return Vector3.zero;
 
     }
@@ -30,6 +30,13 @@ public class RigidBody2DProvider : ExpansionMonoBehaviour, IPhysics
 
         if( _rigid != null)
             _rigid.velocity = val;
+
+    }
+
+    public void AddFource(Vector3 fource, ForceMode2D mode = ForceMode2D.Impulse)
+    {
+
+        _rigid.AddForce(fource, mode);
 
     }
 

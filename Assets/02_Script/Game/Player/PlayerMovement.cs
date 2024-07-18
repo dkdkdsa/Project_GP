@@ -9,6 +9,7 @@ public class PlayerMovement : ExpansionMonoBehaviour, IMoveable, IJumpable, ILoc
 
     private IStatContainer _statContainer;
     private IPhysics _physics;
+    private IInputContainer _input;
 
     public bool IsPaused { get; set; }
 
@@ -17,6 +18,7 @@ public class PlayerMovement : ExpansionMonoBehaviour, IMoveable, IJumpable, ILoc
 
         _statContainer = list.Find<IStatContainer>();
         _physics = list.Find<IPhysics>();
+        _input = list.Find<IInputContainer>();
 
     }
 
@@ -29,6 +31,9 @@ public class PlayerMovement : ExpansionMonoBehaviour, IMoveable, IJumpable, ILoc
 
     public void Jump()
     {
+
+
+
     }
 
 
@@ -41,6 +46,9 @@ public class PlayerMovement : ExpansionMonoBehaviour, IMoveable, IJumpable, ILoc
 
     public void DoResume()
     {
+
+
+
     }
 
 }

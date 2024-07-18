@@ -1,18 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IInputContainer : MonoBehaviour
+public interface IInputContainer
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public void RegisterEvent(int key, Action @event);
+    public void UnregisterEvent(int key, Action @event);
+    public T GetValue<T>(int key) where T : struct;
+
 }
