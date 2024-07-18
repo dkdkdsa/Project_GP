@@ -1,15 +1,15 @@
 using System.Collections.Generic;
 
-public interface IStatContainer
+public interface IStatContainer : IComponent
 {
 
-    public Dictionary<int, Stat> StatContainer { get; set; }
+    public Dictionary<int, Stat> Container { get; set; }
 
     #region Get
     public Stat GetStat(int key)
     {
 
-        if (StatContainer.TryGetValue(key, out Stat result))
+        if (Container.TryGetValue(key, out Stat result))
         {
 
             return result;
@@ -47,7 +47,7 @@ public interface IStatContainer
     public void AddStat(int key, Stat stat)
     {
 
-        StatContainer.Add(key, stat);
+        Container.Add(key, stat);
 
     }
 

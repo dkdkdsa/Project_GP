@@ -20,4 +20,11 @@ public static class Support
 
     }
 
+    public static T Cast<T>(this object source)
+    {
+
+        return (T)source;
+
+    }
+
 }
