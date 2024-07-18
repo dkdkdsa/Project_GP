@@ -1,16 +1,18 @@
+using UnityEngine;
+
 public class ComponentList
 {
 
-    public ComponentList(IComponent[] components)
+    public ComponentList(Component[] components)
     {
 
         _components = components;
 
     }
 
-    private IComponent[] _components;
+    private Component[] _components;
 
-    public T Find<T>() where T : IComponent
+    public T Find<T>()
     {
 
         T ins = default;

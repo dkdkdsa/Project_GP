@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-public interface IStatContainer : IComponent
+public interface IStatContainer
 {
 
     public Dictionary<int, Stat> Container { get; set; }
@@ -55,4 +55,15 @@ public interface IStatContainer : IComponent
 
     #endregion
 
+
+    public Stat this[int key]
+    {
+        get 
+        { 
+        
+            return Container[key];
+
+        }
+
+    }
 }
