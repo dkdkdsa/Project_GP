@@ -56,7 +56,7 @@ public class PlayerInput : ExpansionMonoBehaviour, IInputContainer, DefaultInput
 
         }
 
-        return default(T);
+        return default;
 
     }
 

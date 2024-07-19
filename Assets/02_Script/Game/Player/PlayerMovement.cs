@@ -5,9 +5,20 @@ using UnityEngine;
 public class PlayerMovement : ExpansionMonoBehaviour, IMoveable, IJumpable, ILocalInject
 {
 
+    #region Input
+
+    private readonly int HASH_MOVE_VALUE_KEY = "MoveValue".GetHash();
+    private readonly int HASH_JUMP_EVENT_KEY = "JumpEvent".GetHash();
+
+    #endregion
+
+    #region Stat
+
     private readonly int HASH_MOVESPEED = "MoveSpeed".GetHash();
 
-    private IStatContainer _statContainer;
+    #endregion
+
+    private IStatContainer _stat;
     private IPhysics _physics;
     private IInputContainer _input;
 
@@ -16,16 +27,25 @@ public class PlayerMovement : ExpansionMonoBehaviour, IMoveable, IJumpable, ILoc
     public void LocalInject(ComponentList list)
     {
 
-        _statContainer = list.Find<IStatContainer>();
+        _stat = list.Find<IStatContainer>();
         _physics = list.Find<IPhysics>();
         _input = list.Find<IInputContainer>();
+
+    }
+
+    private void Update()
+    {
+
+        Move();
 
     }
 
     public void Move()
     {
 
-
+        _physics.SetVelocity(
+            _input.GetValue<Vector2>(HASH_MOVE_VALUE_KEY) 
+            * _stat[HASH_MOVESPEED].Value);
 
     }
 
