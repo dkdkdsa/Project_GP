@@ -1,4 +1,4 @@
-public interface IFactory<T> : IPauseable
+public interface IFactory<T>
 {
 
     public T CreateInstance();
