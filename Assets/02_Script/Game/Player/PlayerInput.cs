@@ -110,4 +110,11 @@ public class PlayerInput : ExpansionMonoBehaviour, IInputContainer, DefaultInput
 
     }
 
+    private void OnDestroy()
+    {
+        
+        _input.Dispose();
+
+    }
+
 }
