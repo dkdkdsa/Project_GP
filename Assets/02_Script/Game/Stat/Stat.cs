@@ -1,12 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 
 [Serializable]
 public class Stat : ICloneable
 {
 
-    private float _value;
+    [SerializeField] private float _value;
     private List<float> _modify = new();
 
     public float Value

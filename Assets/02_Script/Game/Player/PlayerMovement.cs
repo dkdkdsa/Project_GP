@@ -15,26 +15,33 @@ public class PlayerMovement : ExpansionMonoBehaviour, IMoveable, IJumpable, ILoc
     #region Stat
 
     private readonly int HASH_MOVESPEED = "MoveSpeed".GetHash();
+    private readonly int HASH_JUMOPPOWER = "JumpPower".GetHash();
 
     #endregion
 
+    private IInputContainer _input;
     private IStatContainer _stat;
     private IPhysics _physics;
-    private IInputContainer _input;
+    private ISencer _ground;
 
     public bool IsPaused { get; set; }
 
     public void LocalInject(ComponentList list)
     {
 
+        _input = list.Find<IInputContainer>();
         _stat = list.Find<IStatContainer>();
         _physics = list.Find<IPhysics>();
-        _input = list.Find<IInputContainer>();
+        _ground = list.Find<ISencer>();
+
+        _input.RegisterEvent(HASH_JUMP_EVENT_KEY, Jump);
 
     }
 
     private void Update()
     {
+
+        if (IsPaused) return;
 
         Move();
 
@@ -43,16 +50,29 @@ public class PlayerMovement : ExpansionMonoBehaviour, IMoveable, IJumpable, ILoc
     public void Move()
     {
 
-        _physics.SetVelocity(
-            _input.GetValue<Vector2>(HASH_MOVE_VALUE_KEY) 
-            * _stat[HASH_MOVESPEED].Value);
+        var vel = _physics.GetVelocity();
+        var y = vel.y;
+
+        vel = _input.GetValue<Vector2>(HASH_MOVE_VALUE_KEY)
+            * _stat[HASH_MOVESPEED].Value;
+
+        vel.y = y;
+
+        _physics.SetVelocity(vel);
 
     }
 
     public void Jump()
     {
 
+        if (IsPaused) return;
 
+        if (_ground.IsSencing())
+        {
+
+            _physics.AddFource(Vector2.up * _stat[HASH_JUMOPPOWER].Value);
+
+        }
 
     }
 
@@ -68,6 +88,18 @@ public class PlayerMovement : ExpansionMonoBehaviour, IMoveable, IJumpable, ILoc
     {
 
 
+
+    }
+
+    private void OnDestroy()
+    {
+        
+        if( _input != null)
+        {
+
+            _input.UnregisterEvent(HASH_JUMP_EVENT_KEY, Jump);
+
+        }
 
     }
 

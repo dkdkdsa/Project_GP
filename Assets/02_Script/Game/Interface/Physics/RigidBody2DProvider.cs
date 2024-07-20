@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class RigidBody2DProvider : ExpansionMonoBehaviour, IPhysics
 {
 
@@ -9,7 +8,7 @@ public class RigidBody2DProvider : ExpansionMonoBehaviour, IPhysics
 
     private void Awake()
     {
-        
+
         _rigid = GetComponent<Rigidbody2D>();
 
     }
@@ -17,7 +16,7 @@ public class RigidBody2DProvider : ExpansionMonoBehaviour, IPhysics
     public Vector3 GetVelocity()
     {
 
-        if(_rigid != null)
+        if (_rigid != null)
             return _rigid.velocity;
 
         Debug.LogError("RigidBody is Null");
@@ -28,7 +27,7 @@ public class RigidBody2DProvider : ExpansionMonoBehaviour, IPhysics
     public void SetVelocity(Vector3 val)
     {
 
-        if( _rigid != null)
+        if (_rigid != null)
             _rigid.velocity = val;
 
     }
