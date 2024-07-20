@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GroundSencer : ExpansionMonoBehaviour, ISencer
@@ -16,14 +14,14 @@ public class GroundSencer : ExpansionMonoBehaviour, ISencer
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+
         _isSencing = true;
 
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        
+
         _isSencing = true;
 
     }

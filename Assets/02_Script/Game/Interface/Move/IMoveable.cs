@@ -1,4 +1,4 @@
-public interface IMoveable : IPauseable
+public interface IMoveable
 {
 
     public void Move();

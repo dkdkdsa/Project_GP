@@ -7,7 +7,9 @@ public class PlayerInput : ExpansionMonoBehaviour, IInputContainer, DefaultInput
 {
 
     private readonly int HASH_MOVE_VALUE_KEY = "MoveValue".GetHash();
+    private readonly int HASH_MOUSE_POS_KEY = "MousePos".GetHash();
     private readonly int HASH_JUMP_EVENT_KEY = "JumpEvent".GetHash();
+    private readonly int HASH_ATTACK_EVENT_KEY = "AttackEvent".GetHash();
 
     private Dictionary<int, Action> _eventContainer = new();
     private Dictionary<int, object> _valueContainer = new();
@@ -81,6 +83,30 @@ public class PlayerInput : ExpansionMonoBehaviour, IInputContainer, DefaultInput
             _eventContainer[HASH_JUMP_EVENT_KEY]?.Invoke();
 
         }
+
+    }
+
+    public void OnAttackInput(InputAction.CallbackContext context)
+    {
+
+        if (_eventContainer.ContainsKey(HASH_ATTACK_EVENT_KEY) && context.performed)
+        {
+
+            _eventContainer[HASH_ATTACK_EVENT_KEY]?.Invoke();
+
+        }
+
+    }
+
+    public void OnMousePos(InputAction.CallbackContext context)
+    {
+
+        var vec = context.ReadValue<Vector2>();
+
+        if (!_valueContainer.ContainsKey(HASH_MOUSE_POS_KEY))
+            _valueContainer.Add(HASH_MOUSE_POS_KEY, Vector3.zero);
+
+        _valueContainer[HASH_MOUSE_POS_KEY] = vec;
 
     }
 

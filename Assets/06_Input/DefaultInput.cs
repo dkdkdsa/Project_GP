@@ -44,6 +44,24 @@ public partial class @DefaultInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""AttackInput"",
+                    ""type"": ""Button"",
+                    ""id"": ""0d81cd7e-aa30-4fae-b44c-6080d7ccbcad"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""MousePos"",
+                    ""type"": ""Value"",
+                    ""id"": ""996ddd29-5abf-476d-826c-2a90641290dc"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -112,6 +130,28 @@ public partial class @DefaultInput: IInputActionCollection2, IDisposable
                     ""action"": ""JumpInput"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""41bf56c1-96db-4f7b-aacf-095075644681"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KandM"",
+                    ""action"": ""AttackInput"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f23cc9a1-d9f0-4217-8030-b9d173662aa0"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MousePos"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -139,6 +179,8 @@ public partial class @DefaultInput: IInputActionCollection2, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_MoveInput = m_Player.FindAction("MoveInput", throwIfNotFound: true);
         m_Player_JumpInput = m_Player.FindAction("JumpInput", throwIfNotFound: true);
+        m_Player_AttackInput = m_Player.FindAction("AttackInput", throwIfNotFound: true);
+        m_Player_MousePos = m_Player.FindAction("MousePos", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -202,12 +244,16 @@ public partial class @DefaultInput: IInputActionCollection2, IDisposable
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_MoveInput;
     private readonly InputAction m_Player_JumpInput;
+    private readonly InputAction m_Player_AttackInput;
+    private readonly InputAction m_Player_MousePos;
     public struct PlayerActions
     {
         private @DefaultInput m_Wrapper;
         public PlayerActions(@DefaultInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @MoveInput => m_Wrapper.m_Player_MoveInput;
         public InputAction @JumpInput => m_Wrapper.m_Player_JumpInput;
+        public InputAction @AttackInput => m_Wrapper.m_Player_AttackInput;
+        public InputAction @MousePos => m_Wrapper.m_Player_MousePos;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -223,6 +269,12 @@ public partial class @DefaultInput: IInputActionCollection2, IDisposable
             @JumpInput.started += instance.OnJumpInput;
             @JumpInput.performed += instance.OnJumpInput;
             @JumpInput.canceled += instance.OnJumpInput;
+            @AttackInput.started += instance.OnAttackInput;
+            @AttackInput.performed += instance.OnAttackInput;
+            @AttackInput.canceled += instance.OnAttackInput;
+            @MousePos.started += instance.OnMousePos;
+            @MousePos.performed += instance.OnMousePos;
+            @MousePos.canceled += instance.OnMousePos;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -233,6 +285,12 @@ public partial class @DefaultInput: IInputActionCollection2, IDisposable
             @JumpInput.started -= instance.OnJumpInput;
             @JumpInput.performed -= instance.OnJumpInput;
             @JumpInput.canceled -= instance.OnJumpInput;
+            @AttackInput.started -= instance.OnAttackInput;
+            @AttackInput.performed -= instance.OnAttackInput;
+            @AttackInput.canceled -= instance.OnAttackInput;
+            @MousePos.started -= instance.OnMousePos;
+            @MousePos.performed -= instance.OnMousePos;
+            @MousePos.canceled -= instance.OnMousePos;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -263,5 +321,7 @@ public partial class @DefaultInput: IInputActionCollection2, IDisposable
     {
         void OnMoveInput(InputAction.CallbackContext context);
         void OnJumpInput(InputAction.CallbackContext context);
+        void OnAttackInput(InputAction.CallbackContext context);
+        void OnMousePos(InputAction.CallbackContext context);
     }
 }

@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : ExpansionMonoBehaviour, IMoveable, IJumpable, ILocalInject
+public class PlayerMovement : ExpansionMonoBehaviour, IMoveable, IJumpable, ILocalInject, IPauseable
 {
 
     #region Input
@@ -87,14 +85,12 @@ public class PlayerMovement : ExpansionMonoBehaviour, IMoveable, IJumpable, ILoc
     public void DoResume()
     {
 
-
-
     }
 
     private void OnDestroy()
     {
-        
-        if( _input != null)
+
+        if (_input != null)
         {
 
             _input.UnregisterEvent(HASH_JUMP_EVENT_KEY, Jump);
