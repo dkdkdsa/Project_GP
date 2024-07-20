@@ -40,7 +40,7 @@ public class PlayerWeapon : ExpansionMonoBehaviour, ILocalInject, IWeaponHandler
     {
 
         _weapon = weapon;
-        _weapon.GetTransform().SetParent(_weaponRoot);
+        _weapon.SetUp(_weaponRoot);
 
     }
 
