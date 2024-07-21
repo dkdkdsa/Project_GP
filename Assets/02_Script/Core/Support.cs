@@ -27,4 +27,11 @@ public static class Support
 
     }
 
+    public static int GetGameObjectId(this Component comp)
+    {
+
+        return comp.gameObject.GetInstanceID();
+
+    }
+
 }

@@ -7,7 +7,7 @@
 
 using UnityEngine;
 
-public class MonoSingleton<T> : MonoBehaviour where T : MonoBehaviour
+public class MonoSingleton<T> : ExpansionMonoBehaviour where T : MonoBehaviour
 {
 
     private static T _instance;

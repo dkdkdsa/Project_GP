@@ -27,15 +27,14 @@ public class WeaponItem : ExpansionMonoBehaviour, IItem<IWeaponHandler>, ILocalI
     private void OnTriggerEnter2D(Collider2D collision)
     {
         
-        if(collision.TryGetComponent<GameTag>(out var compo))
+        var tag = ObjectManager.Instance.FindGameTag(collision.GetGameObjectId());
+
+        if (tag == null) return;
+
+        if (tag.HasTag(Tags.ItemGet))
         {
 
-            if(compo.HasTag(Tags.ItemGet))
-            {
-
-                GetItem(collision.GetComponent<IWeaponHandler>());
-
-            }
+            GetItem(collision.GetComponent<IWeaponHandler>());
 
         }
 

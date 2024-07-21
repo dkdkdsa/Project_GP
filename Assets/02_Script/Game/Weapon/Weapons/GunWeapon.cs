@@ -1,12 +1,26 @@
+using System;
 using UnityEngine;
 
-public class GunWeapon : ExpansionMonoBehaviour, IWeapon
+public class GunWeapon : ExpansionMonoBehaviour, IWeapon, ILocalInject
 {
+
+    [SerializeField] private Transform _shootTrm;
+
+    private IFactory<IBullet> _bulletFactory;
+
+    public void LocalInject(ComponentList list)
+    {
+
+        _bulletFactory = list.Find<IFactory<IBullet>>();
+
+    }
 
     public void Attack()
     {
 
-        Debug.Log("Attack");
+        var blt = _bulletFactory.CreateInstance();
+
+        blt.Shoot(_shootTrm.right, new() { speed = 3, position = _shootTrm.position });
 
     }
 
@@ -30,6 +44,13 @@ public class GunWeapon : ExpansionMonoBehaviour, IWeapon
 
         transform.SetParent(root);
         transform.localPosition = Vector3.zero;
+
+    }
+
+    public void Release()
+    {
+
+        Destroy(gameObject);
 
     }
 

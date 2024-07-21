@@ -39,6 +39,13 @@ public class PlayerWeapon : ExpansionMonoBehaviour, ILocalInject, IWeaponHandler
     public void EquipWeapon(IWeapon weapon)
     {
 
+        if(_weapon != null)
+        {
+
+            _weapon.Release();
+
+        }
+
         _weapon = weapon;
         _weapon.SetUp(_weaponRoot);
 
