@@ -1,0 +1,2503 @@
+fileFormatVersion: 2
+guid: 4fee56b6d9daeb84998457df68a7b014
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1368
+        width: 170
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0470fa5be8dfeff47967ef440c4da7ff
+      internalID: -81119187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_1
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 1368
+        width: 169
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 028fec2dc01f6974a8cca0e55cefe37f
+      internalID: 702437243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_2
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 1368
+        width: 170
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16f6dc336c65e114e8d5daefcd58c6a6
+      internalID: 1035285361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_3
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 1368
+        width: 170
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa87594c3a42442439d751accbbbe3f8
+      internalID: -1248169461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_4
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 1368
+        width: 169
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c58d9368a0c784a4a917b10df97902df
+      internalID: -1084374021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_5
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 1367
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea681114a3685534eab328ac88d27174
+      internalID: -843721310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_6
+      rect:
+        serializedVersion: 2
+        x: 1183
+        y: 1367
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb034cd9cdde5bb498b18f689da3ba86
+      internalID: 1347141295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_7
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 1369
+        width: 170
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 308f77d7b513e494a875504c065df0e8
+      internalID: 234156526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_8
+      rect:
+        serializedVersion: 2
+        x: 1578
+        y: 1368
+        width: 170
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d5898087205ea44ea99b9c956c1e59f
+      internalID: 1074274017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_9
+      rect:
+        serializedVersion: 2
+        x: 1775
+        y: 1368
+        width: 169
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87f8ccbd8e6fd6140b684b525549b630
+      internalID: 202675157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_10
+      rect:
+        serializedVersion: 2
+        x: 1974
+        y: 1369
+        width: 167
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 899f9790d1184894fac649809811b112
+      internalID: 1209891199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_11
+      rect:
+        serializedVersion: 2
+        x: 2210
+        y: 1369
+        width: 69
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17b9c3d7258219e4498acf346e6d21f9
+      internalID: -544246995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_12
+      rect:
+        serializedVersion: 2
+        x: 2383
+        y: 1409
+        width: 115
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83a130bfab8f175449a359f6880f1952
+      internalID: 1261359902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_13
+      rect:
+        serializedVersion: 2
+        x: 2559
+        y: 1410
+        width: 160
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a866ea6f01d7704b99be432da98be55
+      internalID: 1312239541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_14
+      rect:
+        serializedVersion: 2
+        x: 2769
+        y: 1408
+        width: 133
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b8c6dc309934a046a1f7ae72cb51175
+      internalID: 492642854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_15
+      rect:
+        serializedVersion: 2
+        x: 2949
+        y: 1414
+        width: 170
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a94798609613a14890f41ec97b41477
+      internalID: 1462767512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1171
+        width: 170
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77e39e1198859ca4f89bef8b2abf59cd
+      internalID: -665398093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_17
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 1171
+        width: 168
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 035d63c1d6cab5242b46cc372e835acb
+      internalID: 1954075565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_18
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1171
+        width: 166
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 363d5e9fd693427438800e3fefa0f6ed
+      internalID: 1457875859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_19
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 1170
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f7125cd71a1d8a4ca42f525243fdc83
+      internalID: 2005417460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_20
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 1170
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cde736773d48e4c408f438a480ca09b9
+      internalID: -1254417953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_21
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 1170
+        width: 169
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1608d026fc8a42643bbd059a049c4dc1
+      internalID: -2039886027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_22
+      rect:
+        serializedVersion: 2
+        x: 1183
+        y: 1171
+        width: 169
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ff3866945298ec49b1f16b3ce85550a
+      internalID: 1111676688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_23
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 1170
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a5d4cceed9a0eb41bbd5c13c774e46c
+      internalID: 274274770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_24
+      rect:
+        serializedVersion: 2
+        x: 1577
+        y: 1170
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a9988c13c48ff548b98c0b0d03e4cc6
+      internalID: -1432503461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_25
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 1170
+        width: 169
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abda71d1e1c852147923c564a8c69971
+      internalID: 1637642981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_26
+      rect:
+        serializedVersion: 2
+        x: 1974
+        y: 1170
+        width: 167
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c4ed0ff184ef004aa8fec04fc0892f7
+      internalID: -197933903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_27
+      rect:
+        serializedVersion: 2
+        x: 2178
+        y: 1240
+        width: 132
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef56768bff3eb8046ab879a49c2d848d
+      internalID: -1556972722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_28
+      rect:
+        serializedVersion: 2
+        x: 2417
+        y: 1170
+        width: 50
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 419692d956518e7468382630e488825a
+      internalID: 2080629793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_29
+      rect:
+        serializedVersion: 2
+        x: 2585
+        y: 1194
+        width: 108
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 742fa80745119cf4199228d8498e94e6
+      internalID: -1230216834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_30
+      rect:
+        serializedVersion: 2
+        x: 2774
+        y: 1198
+        width: 124
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62514807a6e41174a9609bbb266e8434
+      internalID: -1473335244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_31
+      rect:
+        serializedVersion: 2
+        x: 2967
+        y: 1205
+        width: 135
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8624e1bb732377b4c89c5eb3a8eaa235
+      internalID: -688842119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_32
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 975
+        width: 78
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aafe0e46d8439d04bb8d023617256d7e
+      internalID: 1761768457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_33
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 975
+        width: 31
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09d2864efecdcf94b9c2c453cc671b11
+      internalID: 1727582788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_34
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 974
+        width: 115
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a53b2037c41b76e4c9bb0697fa8def42
+      internalID: 1536519869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_35
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 1017
+        width: 82
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 553d17ae1ee81c64d9e8fd4ebee69853
+      internalID: -1639636638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_36
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 1025
+        width: 83
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c60dc27fe17c8247b2dcd3ef11b00e2
+      internalID: -1616249513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_37
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 1017
+        width: 98
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1391653e7e775cb42bd73655f99f929b
+      internalID: -357852929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_38
+      rect:
+        serializedVersion: 2
+        x: 1222
+        y: 1018
+        width: 93
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e2260d791977074ba5ce97c97807826
+      internalID: 1435875143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_39
+      rect:
+        serializedVersion: 2
+        x: 1382
+        y: 973
+        width: 167
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74bdb726733f7eb4c85d9426e453754a
+      internalID: 852539070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_40
+      rect:
+        serializedVersion: 2
+        x: 1777
+        y: 974
+        width: 166
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0937193f0b3d6ca41a548a122b2a9068
+      internalID: -407751937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_41
+      rect:
+        serializedVersion: 2
+        x: 1977
+        y: 976
+        width: 164
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13cf6f35dfb87784fbc0d884f4bc5bf9
+      internalID: 934232956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_42
+      rect:
+        serializedVersion: 2
+        x: 2162
+        y: 975
+        width: 165
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 752462b48d8abdb44bc0e3ccc5a7523e
+      internalID: -1408810597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_43
+      rect:
+        serializedVersion: 2
+        x: 2391
+        y: 1008
+        width: 101
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e782b5223a72e094db67302f8678edc9
+      internalID: -416220316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_44
+      rect:
+        serializedVersion: 2
+        x: 2556
+        y: 1045
+        width: 166
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98e94074d5291c741877a734d42f3e6e
+      internalID: -592886984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_45
+      rect:
+        serializedVersion: 2
+        x: 2792
+        y: 1046
+        width: 87
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67df17a17fc8e914b841a7351698f7fd
+      internalID: 1089006087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_46
+      rect:
+        serializedVersion: 2
+        x: 2971
+        y: 995
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1389fcdf5d6f1e48a9f6f3b9cab65cf
+      internalID: -2091777235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_47
+      rect:
+        serializedVersion: 2
+        x: 1580
+        y: 974
+        width: 166
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 625007a6ed37ea345b8cfeeee44b8681
+      internalID: 1533499343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_48
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 776
+        width: 149
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05268dd747e21e24ab454a2a3abf89af
+      internalID: -705571979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_49
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 776
+        width: 150
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edf6b0f3cba78d64db825c78f83be842
+      internalID: 1955486924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_50
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 777
+        width: 125
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b25514c593d9c524a90eb69ef634a20a
+      internalID: -1413959845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_51
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 777
+        width: 125
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2497a0f0407cec14c8fa382f197f1ee4
+      internalID: -219661485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_52
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 777
+        width: 168
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5554b451ad9cab949a897adee0257fc3
+      internalID: 2081958240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_53
+      rect:
+        serializedVersion: 2
+        x: 988
+        y: 777
+        width: 166
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24b30602bb6542344ad213dd40946a20
+      internalID: 1916206641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_54
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 776
+        width: 169
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8b91b4a4d74393458addf80701dadbe
+      internalID: -969787733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_55
+      rect:
+        serializedVersion: 2
+        x: 1579
+        y: 904
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2391ffa433bd8ea49af15a33bdb019e7
+      internalID: -727262713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_56
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 904
+        width: 42
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4d93b9dbf8d647499e4d7160bfbb799
+      internalID: -1032915904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_57
+      rect:
+        serializedVersion: 2
+        x: 1775
+        y: 776
+        width: 170
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74655b9e2dc9e1a4aa994a31ab7b9674
+      internalID: -2031304279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_58
+      rect:
+        serializedVersion: 2
+        x: 1995
+        y: 777
+        width: 125
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8179b84fdffac2d44b03411946a16b11
+      internalID: 950848597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_59
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 816
+        width: 98
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4e2fc068ea40564a895938699dd8956
+      internalID: 728535972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_60
+      rect:
+        serializedVersion: 2
+        x: 1579
+        y: 776
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61f3a65515f28cf4d832cf68ad25343b
+      internalID: -176616852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_61
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 777
+        width: 41
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec7828de673e24b4e9419e8d1aead67c
+      internalID: 1053220007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_62
+      rect:
+        serializedVersion: 2
+        x: 2268
+        y: 582
+        width: 48
+        height: 311
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c782f834bbd1f2d489fa3422be4ea1c2
+      internalID: 1696936476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_63
+      rect:
+        serializedVersion: 2
+        x: 2443
+        y: 589
+        width: 72
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e11d9477977c53748a385e7c2a4210c7
+      internalID: 535888701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_64
+      rect:
+        serializedVersion: 2
+        x: 2639
+        y: 646
+        width: 54
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70185811082a7394a8d4123e60ae7502
+      internalID: 1013896215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_65
+      rect:
+        serializedVersion: 2
+        x: 2770
+        y: 569
+        width: 164
+        height: 335
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a0bf6aeb78327d4e9c2dc4aeb747dc5
+      internalID: 1904413705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_66
+      rect:
+        serializedVersion: 2
+        x: 2958
+        y: 569
+        width: 161
+        height: 261
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a321d8a044ae0ca47bf0cd8f2ecea4c6
+      internalID: 159160471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_67
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 578
+        width: 169
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 550f37a10af4f2d46a697a578a0c78b8
+      internalID: 24885751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_68
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 580
+        width: 37
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b324a4e50d708ad40834c1fc33ff7460
+      internalID: -280621772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_69
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 578
+        width: 36
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a74b83a0d5d412548ae6becf8c2ee248
+      internalID: -1337800889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_70
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 580
+        width: 168
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1401610f647720445835d905f29859d6
+      internalID: -902426195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_71
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 685
+        width: 168
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8607593c9c6ff64faff2434978d3d64
+      internalID: -1388401072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_72
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 579
+        width: 63
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d97694f7f9c5bc4a92db629ad736aa8
+      internalID: 1542429175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_73
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 579
+        width: 170
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12d6bce68e6b84e44812760d1b1bda48
+      internalID: 1662402672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_74
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 579
+        width: 167
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f0cceef0c44c144f80e8cdee1aa7da2
+      internalID: -1748089717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_75
+      rect:
+        serializedVersion: 2
+        x: 1579
+        y: 580
+        width: 168
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 528cc1cdb492451429ad87d8a2d2487c
+      internalID: 769985242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_76
+      rect:
+        serializedVersion: 2
+        x: 1796
+        y: 578
+        width: 129
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c96933f794e9d644bce23aae4210d15
+      internalID: -922709728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_77
+      rect:
+        serializedVersion: 2
+        x: 2003
+        y: 657
+        width: 108
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f9a1b41dd40c1345966073b4e66b730
+      internalID: -1796424975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_78
+      rect:
+        serializedVersion: 2
+        x: 1384
+        y: 578
+        width: 166
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a8b23fec1744d9408f78896ced912e0
+      internalID: -1833730817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_79
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 356
+        width: 110
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f99dbdb25a8f75540a2528ca925694f8
+      internalID: -1912908881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_80
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 356
+        width: 110
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 282434ae3968e404b83604011b701793
+      internalID: -1434489897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_81
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 355
+        width: 111
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46c13a4000846fb44b7a4783f35fb159
+      internalID: 2022712527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_82
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 356
+        width: 111
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0227b7ab21622249b77b8a47e65e3a6
+      internalID: -29517529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_83
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 354
+        width: 111
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaaba682f4643b247898fb38d1bba0df
+      internalID: -1013973077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_84
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 355
+        width: 110
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95950913dee76aa458cdbc0a8c8ecbae
+      internalID: 1784014753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_85
+      rect:
+        serializedVersion: 2
+        x: 1213
+        y: 354
+        width: 111
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a66470d62eaa03544b4d2ad2369a0426
+      internalID: 288709575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_86
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 355
+        width: 111
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca6f6defa46b0cc46959be5bf263a67e
+      internalID: -156691481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_87
+      rect:
+        serializedVersion: 2
+        x: 1609
+        y: 419
+        width: 41
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0724c365779098429d39131c4bacac5
+      internalID: 909096125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_88
+      rect:
+        serializedVersion: 2
+        x: 1725
+        y: 420
+        width: 43
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a66974feccb4cb4bac0fbc8bd34bc95
+      internalID: 523541844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_89
+      rect:
+        serializedVersion: 2
+        x: 1844
+        y: 419
+        width: 41
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 181576ad7004c714985e942544bdf1ae
+      internalID: 1763834187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_90
+      rect:
+        serializedVersion: 2
+        x: 1960
+        y: 420
+        width: 42
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f880fd930118b142b05aab325e2d1f2
+      internalID: 1525950892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_91
+      rect:
+        serializedVersion: 2
+        x: 2068
+        y: 354
+        width: 299
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c7aca38a74d3e64289ce1b6313b761c
+      internalID: 977004861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_92
+      rect:
+        serializedVersion: 2
+        x: 2407
+        y: 354
+        width: 337
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 005c17f3aa2708f45a85f6f83176fb15
+      internalID: -661602360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_93
+      rect:
+        serializedVersion: 2
+        x: 2766
+        y: 354
+        width: 335
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd36f84b60722d342a1e392b01a23b35
+      internalID: -1668057651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_94
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 190
+        width: 72
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13c2060a0e83ad74b9516175ca22e8ff
+      internalID: 1076198230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_95
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 190
+        width: 54
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65aba7e07b987794db49f2d1f43f0112
+      internalID: -1493142137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_96
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 191
+        width: 67
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48b79b674f7a4684096f7da60c740566
+      internalID: 1116426320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_97
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 190
+        width: 66
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb16695c20a8ade47858133d493486c3
+      internalID: 1037106898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_98
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 191
+        width: 75
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 684cdcc703183234fafa9f016f405a55
+      internalID: 926108099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_99
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 190
+        width: 63
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 554737ac92d3f3c43a5a09ac982e84b0
+      internalID: -847133450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_100
+      rect:
+        serializedVersion: 2
+        x: 1169
+        y: 189
+        width: 71
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 451552c19328a224dae5902249f92ea2
+      internalID: 1433753712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_101
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 3
+        width: 69
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6826f262928849745bf06cba0b3f16e8
+      internalID: -1493099642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_102
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 3
+        width: 73
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 780b00a841ec0644689421a7bf420164
+      internalID: 404246330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_103
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 3
+        width: 71
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e91408619949d641a9d4a2fb89237bc
+      internalID: 2117728278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_104
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 5
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ca9fb1fedfb9254d86aa8090f6f9715
+      internalID: 1827696138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_105
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 19
+        width: 62
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb66f36239b5bf44db009c076623fd06
+      internalID: -219934177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_106
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 4
+        width: 83
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a28993b1b280af4297628096085ec78
+      internalID: -479294052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scribblePlatformer_vector_107
+      rect:
+        serializedVersion: 2
+        x: 1187
+        y: 0
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 049effa247da0dd4da78d2aae464d267
+      internalID: 240549307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      scribblePlatformer_vector_0: -81119187
+      scribblePlatformer_vector_1: 702437243
+      scribblePlatformer_vector_10: 1209891199
+      scribblePlatformer_vector_100: 1433753712
+      scribblePlatformer_vector_101: -1493099642
+      scribblePlatformer_vector_102: 404246330
+      scribblePlatformer_vector_103: 2117728278
+      scribblePlatformer_vector_104: 1827696138
+      scribblePlatformer_vector_105: -219934177
+      scribblePlatformer_vector_106: -479294052
+      scribblePlatformer_vector_107: 240549307
+      scribblePlatformer_vector_11: -544246995
+      scribblePlatformer_vector_12: 1261359902
+      scribblePlatformer_vector_13: 1312239541
+      scribblePlatformer_vector_14: 492642854
+      scribblePlatformer_vector_15: 1462767512
+      scribblePlatformer_vector_16: -665398093
+      scribblePlatformer_vector_17: 1954075565
+      scribblePlatformer_vector_18: 1457875859
+      scribblePlatformer_vector_19: 2005417460
+      scribblePlatformer_vector_2: 1035285361
+      scribblePlatformer_vector_20: -1254417953
+      scribblePlatformer_vector_21: -2039886027
+      scribblePlatformer_vector_22: 1111676688
+      scribblePlatformer_vector_23: 274274770
+      scribblePlatformer_vector_24: -1432503461
+      scribblePlatformer_vector_25: 1637642981
+      scribblePlatformer_vector_26: -197933903
+      scribblePlatformer_vector_27: -1556972722
+      scribblePlatformer_vector_28: 2080629793
+      scribblePlatformer_vector_29: -1230216834
+      scribblePlatformer_vector_3: -1248169461
+      scribblePlatformer_vector_30: -1473335244
+      scribblePlatformer_vector_31: -688842119
+      scribblePlatformer_vector_32: 1761768457
+      scribblePlatformer_vector_33: 1727582788
+      scribblePlatformer_vector_34: 1536519869
+      scribblePlatformer_vector_35: -1639636638
+      scribblePlatformer_vector_36: -1616249513
+      scribblePlatformer_vector_37: -357852929
+      scribblePlatformer_vector_38: 1435875143
+      scribblePlatformer_vector_39: 852539070
+      scribblePlatformer_vector_4: -1084374021
+      scribblePlatformer_vector_40: -407751937
+      scribblePlatformer_vector_41: 934232956
+      scribblePlatformer_vector_42: -1408810597
+      scribblePlatformer_vector_43: -416220316
+      scribblePlatformer_vector_44: -592886984
+      scribblePlatformer_vector_45: 1089006087
+      scribblePlatformer_vector_46: -2091777235
+      scribblePlatformer_vector_47: 1533499343
+      scribblePlatformer_vector_48: -705571979
+      scribblePlatformer_vector_49: 1955486924
+      scribblePlatformer_vector_5: -843721310
+      scribblePlatformer_vector_50: -1413959845
+      scribblePlatformer_vector_51: -219661485
+      scribblePlatformer_vector_52: 2081958240
+      scribblePlatformer_vector_53: 1916206641
+      scribblePlatformer_vector_54: -969787733
+      scribblePlatformer_vector_55: -727262713
+      scribblePlatformer_vector_56: -1032915904
+      scribblePlatformer_vector_57: -2031304279
+      scribblePlatformer_vector_58: 950848597
+      scribblePlatformer_vector_59: 728535972
+      scribblePlatformer_vector_6: 1347141295
+      scribblePlatformer_vector_60: -176616852
+      scribblePlatformer_vector_61: 1053220007
+      scribblePlatformer_vector_62: 1696936476
+      scribblePlatformer_vector_63: 535888701
+      scribblePlatformer_vector_64: 1013896215
+      scribblePlatformer_vector_65: 1904413705
+      scribblePlatformer_vector_66: 159160471
+      scribblePlatformer_vector_67: 24885751
+      scribblePlatformer_vector_68: -280621772
+      scribblePlatformer_vector_69: -1337800889
+      scribblePlatformer_vector_7: 234156526
+      scribblePlatformer_vector_70: -902426195
+      scribblePlatformer_vector_71: -1388401072
+      scribblePlatformer_vector_72: 1542429175
+      scribblePlatformer_vector_73: 1662402672
+      scribblePlatformer_vector_74: -1748089717
+      scribblePlatformer_vector_75: 769985242
+      scribblePlatformer_vector_76: -922709728
+      scribblePlatformer_vector_77: -1796424975
+      scribblePlatformer_vector_78: -1833730817
+      scribblePlatformer_vector_79: -1912908881
+      scribblePlatformer_vector_8: 1074274017
+      scribblePlatformer_vector_80: -1434489897
+      scribblePlatformer_vector_81: 2022712527
+      scribblePlatformer_vector_82: -29517529
+      scribblePlatformer_vector_83: -1013973077
+      scribblePlatformer_vector_84: 1784014753
+      scribblePlatformer_vector_85: 288709575
+      scribblePlatformer_vector_86: -156691481
+      scribblePlatformer_vector_87: 909096125
+      scribblePlatformer_vector_88: 523541844
+      scribblePlatformer_vector_89: 1763834187
+      scribblePlatformer_vector_9: 202675157
+      scribblePlatformer_vector_90: 1525950892
+      scribblePlatformer_vector_91: 977004861
+      scribblePlatformer_vector_92: -661602360
+      scribblePlatformer_vector_93: -1668057651
+      scribblePlatformer_vector_94: 1076198230
+      scribblePlatformer_vector_95: -1493142137
+      scribblePlatformer_vector_96: 1116426320
+      scribblePlatformer_vector_97: 1037106898
+      scribblePlatformer_vector_98: 926108099
+      scribblePlatformer_vector_99: -847133450
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

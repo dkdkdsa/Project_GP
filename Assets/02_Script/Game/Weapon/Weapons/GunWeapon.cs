@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class GunWeapon : ExpansionMonoBehaviour, IWeapon, ILocalInject
@@ -53,5 +52,6 @@ public class GunWeapon : ExpansionMonoBehaviour, IWeapon, ILocalInject
         Destroy(gameObject);
 
     }
+
 
 }

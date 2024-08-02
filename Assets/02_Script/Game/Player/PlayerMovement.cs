@@ -21,6 +21,7 @@ public class PlayerMovement : ExpansionMonoBehaviour, IMoveable, IJumpable, ILoc
     private IStatContainer _stat;
     private IPhysics _physics;
     private ISencer _ground;
+    private bool _isRight;
 
     public bool IsPaused { get; set; }
 
@@ -96,6 +97,22 @@ public class PlayerMovement : ExpansionMonoBehaviour, IMoveable, IJumpable, ILoc
             _input.UnregisterEvent(HASH_JUMP_EVENT_KEY, Jump);
 
         }
+
+    }
+
+    public bool IsRight()
+    {
+
+        _isRight = _input.GetValue<Vector2>(HASH_MOVE_VALUE_KEY).x switch 
+        { 
+
+            > 0 => true,
+            < 0 => false,
+            _ => _isRight, 
+
+        };
+
+        return _isRight;
 
     }
 
