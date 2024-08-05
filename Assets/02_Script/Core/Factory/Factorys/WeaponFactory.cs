@@ -1,16 +1,35 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class WeaponFactory : ExpansionMonoBehaviour, IFactory<IWeapon>
 {
 
-    [SerializeField] private GameObject _prefab;
+    private Dictionary<string, GameObject> _prefabContainer = new();
 
-    public IWeapon CreateInstance()
+    [field:SerializeField] public List<FactoryData> FactoryDatas { get; set; }
+
+    private void Awake()
+    {
+        
+        foreach(var factoryData in FactoryDatas)
+        {
+
+            _prefabContainer.Add(factoryData.key, factoryData.obj);
+
+        }
+
+    }
+
+    public IWeapon CreateInstance(PrefabData data)
     {
 
-        var ins = Instantiate(_prefab);
+        var ins = _prefabContainer[data.prefabKey];
 
-        return ins.GetComponent<IWeapon>();
+        if (ins == null) return null;
+
+        var obj = Instantiate(ins).GetComponent<IWeapon>();
+
+        return obj;
 
     }
 

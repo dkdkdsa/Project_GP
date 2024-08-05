@@ -10,7 +10,7 @@ public class WeaponItem : ExpansionMonoBehaviour, IItem<IWeaponHandler>, ILocalI
     public void LocalInject(ComponentList list)
     {
 
-        _weaponFactory = list.Find<IFactory<IWeapon>>();
+        _weaponFactory = Factory.GetFactory<IWeapon>();
 
     }
 
@@ -19,7 +19,7 @@ public class WeaponItem : ExpansionMonoBehaviour, IItem<IWeaponHandler>, ILocalI
 
         if (targetHandler == null) return;
 
-        var ins = _weaponFactory.CreateInstance();
+        var ins = _weaponFactory.CreateInstance(new PrefabData() { prefabKey = ""});
         targetHandler.EquipWeapon(ins);
 
     }

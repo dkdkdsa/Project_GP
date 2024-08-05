@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Unity.Netcode;
 using UnityEngine;
 
 public static class Support
@@ -31,6 +33,25 @@ public static class Support
     {
 
         return comp.gameObject.GetInstanceID();
+
+    }
+
+    public static ClientRpcParams GetRPCParams(this ulong id, bool targeted = true)
+    {
+
+        ClientRpcParams rpcParams = new ClientRpcParams();
+
+        if (targeted)
+        {
+            rpcParams.Send.TargetClientIds = new[] { id };
+        }
+        else
+        {
+            var allClientIds = NetworkManager.Singleton.ConnectedClientsIds;
+            rpcParams.Send.TargetClientIds = allClientIds.Where(clientId => clientId != id).ToArray();
+        }
+
+        return rpcParams;
 
     }
 

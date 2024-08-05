@@ -178,7 +178,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5898841796327760107}
   - component: {fileID: 6203442910199627756}
-  - component: {fileID: 7526395671105778396}
   - component: {fileID: -6622023961440269289}
   m_Layer: 0
   m_Name: Weapon
@@ -222,19 +221,6 @@ MonoBehaviour:
   _hands:
   - {fileID: 1662390251670278515}
   - {fileID: 7791517758419153083}
---- !u!114 &7526395671105778396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3087094555870286170}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc0227f7564e0554a9317c8c2182067f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _bullet: {fileID: 4439164249913980908, guid: dd1e398693c399849894ec93c8fa3429, type: 3}
 --- !u!114 &-6622023961440269289
 MonoBehaviour:
   m_ObjectHideFlags: 0

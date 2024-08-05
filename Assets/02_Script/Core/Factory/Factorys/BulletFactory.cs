@@ -1,15 +1,35 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class BulletFactory : ExpansionMonoBehaviour, IFactory<IBullet>
 {
 
-    [SerializeField] private GameObject _bullet;
+    private Dictionary<string, GameObject> _prefabContainer = new();
 
-    public IBullet CreateInstance()
+    [field:SerializeField] public List<FactoryData> FactoryDatas { get; set; }
+
+    private void Awake()
     {
 
-        var blt = Instantiate(_bullet);
-        return blt.GetComponent<IBullet>();
+        foreach (var factoryData in FactoryDatas)
+        {
+
+            _prefabContainer.Add(factoryData.key, factoryData.obj);
+
+        }
+
+    }
+
+    public IBullet CreateInstance(PrefabData data)
+    {
+
+        var ins = _prefabContainer[data.prefabKey];
+
+        if (ins == null) return null;
+
+        var obj = Instantiate(ins).GetComponent<IBullet>();
+
+        return obj;
 
     }
 

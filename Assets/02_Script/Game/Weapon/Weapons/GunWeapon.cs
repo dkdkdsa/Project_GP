@@ -11,14 +11,14 @@ public class GunWeapon : ExpansionMonoBehaviour, IWeapon, ILocalInject
     public void LocalInject(ComponentList list)
     {
 
-        _bulletFactory = list.Find<IFactory<IBullet>>();
+        _bulletFactory = Factory.GetFactory<IBullet>();
 
     }
 
     public void Attack()
     {
 
-        var blt = _bulletFactory.CreateInstance();
+        var blt = _bulletFactory.CreateInstance(new PrefabData() { prefabKey = "" });
 
         blt.Shoot(_shootTrm.right, new() { speed = 3, position = _shootTrm.position });
 
