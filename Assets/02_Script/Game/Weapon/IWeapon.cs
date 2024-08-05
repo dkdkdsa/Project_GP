@@ -7,5 +7,6 @@ public interface IWeapon
     public void Attack();
     public void SetUp(Transform root);
     public void Release();
+    public Transform[] GetHandPos();
 
 }

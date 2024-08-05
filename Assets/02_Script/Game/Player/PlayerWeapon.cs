@@ -11,6 +11,7 @@ public class PlayerWeapon : ExpansionMonoBehaviour, ILocalInject, IWeaponHandler
     [SerializeField] private Transform _weaponRoot;
 
     private Camera _cam;
+    private IHandController _handController;
     private IInputContainer _input;
     private IWeapon _weapon;
 
@@ -20,6 +21,7 @@ public class PlayerWeapon : ExpansionMonoBehaviour, ILocalInject, IWeaponHandler
     {
 
         _input = list.Find<IInputContainer>();
+        _handController = list.Find<IHandController>();
 
         _input.RegisterEvent(HASH_ATTACK_EVENT_KEY, AttackWeapon);
 
@@ -48,6 +50,7 @@ public class PlayerWeapon : ExpansionMonoBehaviour, ILocalInject, IWeaponHandler
 
         _weapon = weapon;
         _weapon.SetUp(_weaponRoot);
+        _handController.SetUpHandPos(_weapon.GetHandPos());
 
     }
 

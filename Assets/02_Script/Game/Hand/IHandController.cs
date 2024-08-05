@@ -4,7 +4,9 @@ using UnityEngine;
 
 public interface IHandController
 {
-    
-    
+
+    public Transform[] Hands { get; set; }
+    public void SetUpHandPos(Transform[] trms);
+
 
 }

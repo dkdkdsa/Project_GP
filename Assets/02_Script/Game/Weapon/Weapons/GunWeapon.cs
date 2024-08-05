@@ -4,6 +4,7 @@ public class GunWeapon : ExpansionMonoBehaviour, IWeapon, ILocalInject
 {
 
     [SerializeField] private Transform _shootTrm;
+    [SerializeField] private Transform[] _hands;
 
     private IFactory<IBullet> _bulletFactory;
 
@@ -53,5 +54,10 @@ public class GunWeapon : ExpansionMonoBehaviour, IWeapon, ILocalInject
 
     }
 
+    public Transform[] GetHandPos()
+    {
 
+        return _hands;
+
+    }
 }
