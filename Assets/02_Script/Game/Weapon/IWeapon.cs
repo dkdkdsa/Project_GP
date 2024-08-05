@@ -9,5 +9,6 @@ public interface IWeapon
     public void SetUp(Transform root);
     public void Release();
     public Transform[] GetHandPos();
+    public PrefabData GetPrefabData();
 
 }

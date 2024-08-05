@@ -60,4 +60,12 @@ public class GunWeapon : ExpansionMonoBehaviour, IWeapon, ILocalInject
         return _hands;
 
     }
+
+    public PrefabData GetPrefabData()
+    {
+
+        return new PrefabData() { prefabKey = "Gun" };
+
+    }
+
 }

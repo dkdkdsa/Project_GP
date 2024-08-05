@@ -16,7 +16,7 @@ public class PlayerWeapon : ExpansionMonoBehaviour, ILocalInject, IWeaponHandler
     private IInputContainer _input;
     private IWeapon _weapon;
 
-    public event Action OnEquipWeaponEvent;
+    public event Action<PrefabData> OnEquipWeaponEvent;
     public event Action OnUnEquipWeaponEvent;
     public event Action OnAttackWeaponEvent;
     public bool IsPaused { get; set; }
@@ -45,7 +45,7 @@ public class PlayerWeapon : ExpansionMonoBehaviour, ILocalInject, IWeaponHandler
     public virtual void EquipWeapon(IWeapon weapon)
     {
 
-        OnEquipWeaponEvent?.Invoke();
+        OnEquipWeaponEvent?.Invoke(weapon.GetPrefabData());
 
         if(_weapon != null)
         {

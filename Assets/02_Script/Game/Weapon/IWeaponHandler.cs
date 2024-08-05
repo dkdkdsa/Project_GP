@@ -6,7 +6,7 @@ using UnityEngine;
 public interface IWeaponHandler
 {
 
-    public event Action OnEquipWeaponEvent;
+    public event Action<PrefabData> OnEquipWeaponEvent;
     public event Action OnUnEquipWeaponEvent;
     public event Action OnAttackWeaponEvent;
 
