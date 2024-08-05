@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerInput : ExpansionMonoBehaviour, IInputContainer, DefaultInput.IPlayerActions
+public class PlayerInput : ExpansionMonoBehaviour, IInputContainer, DefaultInput.IPlayerActions, IPauseable
 {
 
     private readonly int HASH_MOVE_VALUE_KEY = "MoveValue".GetHash();
@@ -14,6 +14,8 @@ public class PlayerInput : ExpansionMonoBehaviour, IInputContainer, DefaultInput
     private Dictionary<int, Action> _eventContainer = new();
     private Dictionary<int, object> _valueContainer = new();
     private DefaultInput _input;
+
+    public bool IsPaused { get; set; }
 
     private void Awake()
     {
@@ -114,6 +116,20 @@ public class PlayerInput : ExpansionMonoBehaviour, IInputContainer, DefaultInput
     {
         
         _input.Dispose();
+
+    }
+
+    public void DoPause()
+    {
+
+        _input.Disable();
+
+    }
+
+    public void DoResume()
+    {
+
+        _input.Enable();
 
     }
 

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,9 +16,12 @@ public class PlayerWeapon : ExpansionMonoBehaviour, ILocalInject, IWeaponHandler
     private IInputContainer _input;
     private IWeapon _weapon;
 
+    public event Action OnEquipWeaponEvent;
+    public event Action OnUnEquipWeaponEvent;
+    public event Action OnAttackWeaponEvent;
     public bool IsPaused { get; set; }
 
-    public void LocalInject(ComponentList list)
+    public virtual void LocalInject(ComponentList list)
     {
 
         _input = list.Find<IInputContainer>();
@@ -38,8 +42,10 @@ public class PlayerWeapon : ExpansionMonoBehaviour, ILocalInject, IWeaponHandler
 
     }
 
-    public void EquipWeapon(IWeapon weapon)
+    public virtual void EquipWeapon(IWeapon weapon)
     {
+
+        OnEquipWeaponEvent?.Invoke();
 
         if(_weapon != null)
         {
@@ -54,17 +60,21 @@ public class PlayerWeapon : ExpansionMonoBehaviour, ILocalInject, IWeaponHandler
 
     }
 
-    public void UnEquipWeapon()
+    public virtual void UnEquipWeapon()
     {
+
+        OnUnEquipWeaponEvent?.Invoke();
 
         _weapon = null;
 
     }
 
-    public void AttackWeapon()
+    public virtual void AttackWeapon()
     {
 
         if (_weapon == null) return;
+
+        OnAttackWeaponEvent?.Invoke();
 
         _weapon.Attack();
 
