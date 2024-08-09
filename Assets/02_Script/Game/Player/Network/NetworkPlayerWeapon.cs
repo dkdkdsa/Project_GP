@@ -30,23 +30,25 @@ public class NetworkPlayerWeapon : ExpansionNetworkBehaviour, ILocalInject
     private void HandleEquipWeapon(PrefabData data)
     {
 
-        _weaponHandler.EquipWeapon(_weaponFactory.CreateInstance(data));
+        EquipWeaponServerRPC(data);
 
     }
 
     [ServerRpc]
-    private void EquipWeaponServerRPC()
+    private void EquipWeaponServerRPC(PrefabData data)
     {
 
-
+        EquipWeaponClientRPC(data);
 
     }
 
     [ClientRpc]
-    private void EquipWeaponClientRPC()
+    private void EquipWeaponClientRPC(PrefabData data)
     {
 
+        if (IsOwner) return;
 
+        _weaponHandler.EquipWeapon(_weaponFactory.CreateInstance(data));
 
     }
 

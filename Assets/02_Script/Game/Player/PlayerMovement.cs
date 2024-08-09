@@ -21,6 +21,7 @@ public class PlayerMovement : ExpansionMonoBehaviour, IMoveable, IJumpable, ILoc
     private IStatContainer _stat;
     private IPhysics _physics;
     private ISencer _ground;
+    private Vector2 _inputVec;
     private bool _isRight;
 
     public bool IsPaused { get; set; }
@@ -42,6 +43,8 @@ public class PlayerMovement : ExpansionMonoBehaviour, IMoveable, IJumpable, ILoc
 
         if (IsPaused) return;
 
+        SetInputVector(_input.GetValue<Vector2>(HASH_MOVE_VALUE_KEY));
+
         Move();
 
     }
@@ -52,7 +55,7 @@ public class PlayerMovement : ExpansionMonoBehaviour, IMoveable, IJumpable, ILoc
         var vel = _physics.GetVelocity();
         var y = vel.y;
 
-        vel = _input.GetValue<Vector2>(HASH_MOVE_VALUE_KEY)
+        vel = _inputVec
             * _stat[HASH_MOVESPEED].Value;
 
         vel.y = y;
@@ -103,7 +106,7 @@ public class PlayerMovement : ExpansionMonoBehaviour, IMoveable, IJumpable, ILoc
     public bool IsRight()
     {
 
-        _isRight = _input.GetValue<Vector2>(HASH_MOVE_VALUE_KEY).x switch 
+        _isRight = _physics.GetVelocity().x switch 
         { 
 
             > 0 => true,
@@ -113,6 +116,13 @@ public class PlayerMovement : ExpansionMonoBehaviour, IMoveable, IJumpable, ILoc
         };
 
         return _isRight;
+
+    }
+
+    public void SetInputVector(Vector2 vec)
+    {
+
+        _inputVec = vec;
 
     }
 

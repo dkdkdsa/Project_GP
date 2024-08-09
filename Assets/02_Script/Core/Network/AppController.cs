@@ -5,6 +5,7 @@ using Unity.Services.Core;
 using Unity.Services.Lobbies;
 using Unity.Services.Lobbies.Models;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class AppController : MonoSingleton<AppController>
@@ -12,6 +13,7 @@ public class AppController : MonoSingleton<AppController>
 
     [SerializeField] private ClientSingle _clientPrefab;
     [SerializeField] private HostSingle _hostPrefab;
+    [SerializeField] private UnityEvent _onInitCompleted;
 
     private async void Start()
     {
@@ -25,7 +27,7 @@ public class AppController : MonoSingleton<AppController>
         if (state != AuthState.Authenticated)
         {
 
-            Debug.LogError("¿Œ¡ı Ω«∆–");
+            Debug.LogError("Ïù∏Ï¶ù Ïã§Ìå®");
             return;
 
         }
@@ -45,7 +47,7 @@ public class AppController : MonoSingleton<AppController>
     private void OnInitComplete()
     {
 
-        SceneManager.LoadScene("Intro");
+        _onInitCompleted?.Invoke();
 
     }
 
