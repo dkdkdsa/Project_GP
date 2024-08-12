@@ -5,6 +5,8 @@ using UnityEngine;
 public class WeaponItem : ExpansionMonoBehaviour, IItem<IWeaponHandler>, ILocalInject
 {
 
+    [SerializeField] private string _prefabKey = "Gun";
+
     private IFactory<IWeapon> _weaponFactory;
 
     public void LocalInject(ComponentList list)
@@ -19,7 +21,7 @@ public class WeaponItem : ExpansionMonoBehaviour, IItem<IWeaponHandler>, ILocalI
 
         if (targetHandler == null) return;
 
-        var ins = _weaponFactory.CreateInstance(new PrefabData() { prefabKey = "Gun" });
+        var ins = _weaponFactory.CreateInstance(new PrefabData() { prefabKey = _prefabKey });
         targetHandler.EquipWeapon(ins);
 
     }
@@ -33,6 +35,7 @@ public class WeaponItem : ExpansionMonoBehaviour, IItem<IWeaponHandler>, ILocalI
 
         if (tag.TryGetComponent<IPauseable>(out var compo))
             if (compo.IsPaused) return;
+
 
         if (tag.HasTag(Tags.ItemGet))
         {

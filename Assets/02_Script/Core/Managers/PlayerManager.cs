@@ -1,13 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using Unity.Netcode;
-using UnityEngine;
 
 public class PlayerManager : MonoSingleton<PlayerManager>, ILocalInject
 {
 
     private IFactory<Player> _playerFactory;
-    private List<Player> _players = new();
 
     public void LocalInject(ComponentList list)
     {
@@ -20,8 +16,15 @@ public class PlayerManager : MonoSingleton<PlayerManager>, ILocalInject
     {
 
         var obj = _playerFactory.CreateInstance();
-        _players.Add(obj);
         return obj;
+
+    }
+
+    public void SpawnNetworkPlayer(ulong id)
+    {
+
+        var player = SpawnPlayer();
+        player.GetComponent<NetworkObject>().SpawnAsPlayerObject(id);
 
     }
 

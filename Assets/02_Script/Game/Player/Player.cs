@@ -1,3 +1,5 @@
+using Unity.Netcode.Components;
+
 public class Player : ExpansionMonoBehaviour, ILocalInject, IHp, IDamageable
 {
 

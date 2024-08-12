@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Unity.Netcode;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public static class Support
 {
@@ -33,6 +34,13 @@ public static class Support
     {
 
         return comp.gameObject.GetInstanceID();
+
+    }
+
+    public static T GetRandom<T>(this List<T> target)
+    {
+
+        return target[Random.Range(0, target.Count)];
 
     }
 
