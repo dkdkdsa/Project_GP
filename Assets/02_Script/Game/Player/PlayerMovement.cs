@@ -1,7 +1,8 @@
 using System;
 using UnityEngine;
 
-public class PlayerMovement : ExpansionMonoBehaviour, IMoveable, IJumpable, ILocalInject, IPauseable
+public class PlayerMovement : ExpansionMonoBehaviour, 
+    IMoveable, IJumpable, ILocalInject, IPauseable, IKnockBackable
 {
 
     #region Input
@@ -130,6 +131,13 @@ public class PlayerMovement : ExpansionMonoBehaviour, IMoveable, IJumpable, ILoc
 
         _inputVec = vec;
         OnChangedInputVector?.Invoke(vec);
+
+    }
+
+    public void KnockBack()
+    {
+
+        _physics.AddFource(-_inputVec + Vector2.up);
 
     }
 
