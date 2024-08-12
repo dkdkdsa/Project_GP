@@ -134,7 +134,7 @@ public class PlayerMovement : ExpansionMonoBehaviour,
 
     }
 
-    public void KnockBack()
+    public void KnockBack(float force)
     {
 
         _physics.AddFource(-_inputVec + Vector2.up);
