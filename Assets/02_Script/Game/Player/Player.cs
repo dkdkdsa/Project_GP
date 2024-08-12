@@ -1,10 +1,12 @@
 using Unity.Netcode.Components;
+using UnityEngine;
 
 public class Player : ExpansionMonoBehaviour, ILocalInject, IHp, IDamageable
 {
 
     private readonly int HASH_MAX_HP = "MaxHp".GetHash();
 
+    private IKnockBackable _knockBack;
     private IStatContainer _stat;
     private float _currentHp;
 
@@ -12,6 +14,7 @@ public class Player : ExpansionMonoBehaviour, ILocalInject, IHp, IDamageable
     {
 
         _stat = list.Find<IStatContainer>();
+        _knockBack = list.Find<IKnockBackable>();
 
     }
 
@@ -42,6 +45,7 @@ public class Player : ExpansionMonoBehaviour, ILocalInject, IHp, IDamageable
     {
 
         _currentHp -= hp;
+        _currentHp = Mathf.Clamp(_currentHp, 0, GetMaxHp());
 
     }
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bullet : ExpansionMonoBehaviour, IBullet, ILocalInject
 {
 
-    private IPhysics _physics;
+    protected IPhysics _physics;
     protected float _damage;
 
     public void LocalInject(ComponentList list)
@@ -36,14 +36,14 @@ public class Bullet : ExpansionMonoBehaviour, IBullet, ILocalInject
         if (tag.HasTag(Tags.Hit))
         {
 
-            OnTargetHit(tag);
+            OnTargetHit(tag, tag.transform.position);
             Destroy(gameObject);
 
         }
 
     }
 
-    protected virtual void OnTargetHit(GameTag tag)
+    protected virtual void OnTargetHit(GameTag tag, Vector2 point)
     {
     }
 
