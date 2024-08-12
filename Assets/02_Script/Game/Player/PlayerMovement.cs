@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerMovement : ExpansionMonoBehaviour, IMoveable, IJumpable, ILocalInject, IPauseable
@@ -23,6 +24,8 @@ public class PlayerMovement : ExpansionMonoBehaviour, IMoveable, IJumpable, ILoc
     private ISencer _ground;
     private Vector2 _inputVec;
     private bool _isRight;
+
+    public event Action<Vector2> OnChangedInputVector;
 
     public bool IsPaused { get; set; }
 
@@ -106,7 +109,7 @@ public class PlayerMovement : ExpansionMonoBehaviour, IMoveable, IJumpable, ILoc
     public bool IsRight()
     {
 
-        _isRight = _physics.GetVelocity().x switch 
+        _isRight = _inputVec.x switch 
         { 
 
             > 0 => true,
@@ -122,7 +125,11 @@ public class PlayerMovement : ExpansionMonoBehaviour, IMoveable, IJumpable, ILoc
     public void SetInputVector(Vector2 vec)
     {
 
+        if (_inputVec == vec)
+            return;
+
         _inputVec = vec;
+        OnChangedInputVector?.Invoke(vec);
 
     }
 

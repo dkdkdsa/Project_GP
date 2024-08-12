@@ -6,6 +6,7 @@ public class Bullet : ExpansionMonoBehaviour, IBullet, ILocalInject
 {
 
     private IPhysics _physics;
+    protected float _damage;
 
     public void LocalInject(ComponentList list)
     {
@@ -21,6 +22,7 @@ public class Bullet : ExpansionMonoBehaviour, IBullet, ILocalInject
         transform.position = param.position;
 
         _physics.SetVelocity(param.dir * param.speed);
+        _damage = param.damage;
 
     }
 
@@ -34,10 +36,15 @@ public class Bullet : ExpansionMonoBehaviour, IBullet, ILocalInject
         if (tag.HasTag(Tags.Hit))
         {
 
+            OnTargetHit(tag);
             Destroy(gameObject);
 
         }
 
+    }
+
+    protected virtual void OnTargetHit(GameTag tag)
+    {
     }
 
 }

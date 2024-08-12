@@ -10,4 +10,12 @@ public class ExpansionNetworkBehaviour : NetworkBehaviour
 
     }
 
+
+    public void Despawn(bool destroy = true)
+    {
+
+        NetworkObject.Despawn(destroy);
+
+    }
+
 }
