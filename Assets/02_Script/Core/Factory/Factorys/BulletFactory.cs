@@ -20,14 +20,16 @@ public class BulletFactory : ExpansionMonoBehaviour, IFactory<IBullet>
 
     }
 
-    public IBullet CreateInstance(PrefabData data)
+    public IBullet CreateInstance(PrefabData data, object extraData = null)
     {
 
         var ins = _prefabContainer[data.prefabKey];
+        var param = extraData.Cast<BulletDataParam>();
 
         if (ins == null) return null;
 
         var obj = Instantiate(ins).GetComponent<IBullet>();
+        obj.Shoot(param);
 
         return obj;
 

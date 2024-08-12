@@ -18,9 +18,9 @@ public class GunWeapon : ExpansionMonoBehaviour, IWeapon, ILocalInject
     public void Attack()
     {
 
-        var blt = _bulletFactory.CreateInstance(new PrefabData() { prefabKey = "" });
-
-        blt.Shoot(_shootTrm.right, new() { speed = 3, position = _shootTrm.position });
+        _bulletFactory.CreateInstance(new PrefabData() { prefabKey = "" }, 
+            new BulletDataParam () 
+        { speed = 3, position = _shootTrm.position, dir = _shootTrm.right });
 
     }
 

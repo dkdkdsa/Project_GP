@@ -35,7 +35,7 @@ public class Stat : ICloneable
     {
 
         _value = ins._value;
-        _modify = ins._modify.ToList();
+        _modify = ins._modify == null ? new() : ins._modify.ToList();
 
     }
 

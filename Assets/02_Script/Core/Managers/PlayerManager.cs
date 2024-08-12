@@ -7,7 +7,7 @@ public class PlayerManager : MonoSingleton<PlayerManager>, ILocalInject
 {
 
     private IFactory<Player> _playerFactory;
-    private List<Player> _players;
+    private List<Player> _players = new();
 
     public void LocalInject(ComponentList list)
     {

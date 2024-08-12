@@ -12,7 +12,7 @@ public class PlayerNetworkController : ExpansionNetworkBehaviour, ILocalInject, 
 
     }
 
-    public override void OnNetworkSpawn()
+    public void Start()
     {
 
         if (!IsOwner)

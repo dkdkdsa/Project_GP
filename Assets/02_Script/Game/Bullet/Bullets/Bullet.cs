@@ -14,13 +14,13 @@ public class Bullet : ExpansionMonoBehaviour, IBullet, ILocalInject
 
     }
 
-    public void Shoot(Vector2 dir, BulletDataParam param)
+    public void Shoot(BulletDataParam param)
     {
 
-        transform.right = dir;
+        transform.right = param.dir;
         transform.position = param.position;
 
-        _physics.SetVelocity(dir * param.speed);
+        _physics.SetVelocity(param.dir * param.speed);
 
     }
 

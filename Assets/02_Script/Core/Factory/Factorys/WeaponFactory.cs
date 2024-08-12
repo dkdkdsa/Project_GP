@@ -20,7 +20,7 @@ public class WeaponFactory : ExpansionMonoBehaviour, IFactory<IWeapon>
 
     }
 
-    public IWeapon CreateInstance(PrefabData data)
+    public IWeapon CreateInstance(PrefabData data, object extraData = null)
     {
 
         var ins = _prefabContainer[data.prefabKey];

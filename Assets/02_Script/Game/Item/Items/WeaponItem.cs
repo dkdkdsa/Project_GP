@@ -19,7 +19,7 @@ public class WeaponItem : ExpansionMonoBehaviour, IItem<IWeaponHandler>, ILocalI
 
         if (targetHandler == null) return;
 
-        var ins = _weaponFactory.CreateInstance(new PrefabData() { prefabKey = ""});
+        var ins = _weaponFactory.CreateInstance(new PrefabData() { prefabKey = "Gun"});
         targetHandler.EquipWeapon(ins);
 
     }
