@@ -40,9 +40,9 @@ public class SceneSwitchLeftButton
 	{
 		GUILayout.FlexibleSpace();
 
-		if (GUILayout.Button(new GUIContent("B", "Start Bootstrap Scene"), ToolbarStyles.commandButtonStyle))
+		if (GUILayout.Button(new GUIContent("B", "Start BootStrap Scene"), ToolbarStyles.commandButtonStyle))
 		{
-			SceneHelper.StartScene("Bootstrap");
+			SceneHelper.StartScene("BootStrap");
 		}
 	}
 }
