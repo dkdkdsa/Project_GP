@@ -384,6 +384,7 @@ GameObject:
   - component: {fileID: 366825942}
   - component: {fileID: 366825941}
   - component: {fileID: 366825940}
+  - component: {fileID: 366825943}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -463,6 +464,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43cd9af3a4c3c4f42a99188dcb12974c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &366825943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366825937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c83cab23beb7af94a896e51085c625da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _respawnTime: 5
 --- !u!1 &369526930
 GameObject:
   m_ObjectHideFlags: 0
@@ -1407,7 +1421,6 @@ GameObject:
   - component: {fileID: 1997947408}
   - component: {fileID: 1997947407}
   - component: {fileID: 1997947406}
-  - component: {fileID: 1997947405}
   - component: {fileID: 1997947412}
   m_Layer: 0
   m_Name: Square (1)
@@ -1437,18 +1450,6 @@ MonoBehaviour:
   SpawnWithObservers: 1
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
---- !u!114 &1997947405
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1997947403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d49c0d3bb1eeed49ac211fad12b3821, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1997947406
 MonoBehaviour:
   m_ObjectHideFlags: 0

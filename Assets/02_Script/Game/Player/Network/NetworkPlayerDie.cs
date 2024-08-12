@@ -45,6 +45,7 @@ public class NetworkPlayerDie : ExpansionNetworkBehaviour, ILocalInject
     private void PlayerDieServerRPC()
     {
 
+        NetworkGameManager.Instance.DiePlayer(OwnerClientId);
         Despawn();
 
     }

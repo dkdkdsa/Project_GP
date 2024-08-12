@@ -18,10 +18,23 @@ public class NetworkGameManager : NetworkMonoSingleton<NetworkGameManager>
         foreach (var id in NetworkManager.ConnectedClientsIds)
         {
 
-            var player = PlayerManager.Instance.SpawnPlayer();
-            player.GetComponent<NetworkObject>().SpawnWithOwnership(id, true);
+            PlayerManager.Instance.SpawnNetworkPlayer(id);
 
         }
+
+    }
+
+    public void DiePlayer(ulong diePlayerId)
+    {
+
+        RespawnManager.Instance.DiePlayer(diePlayerId, HandleRespawn);
+
+    }
+
+    private void HandleRespawn(ulong id)
+    {
+
+        PlayerManager.Instance.SpawnNetworkPlayer(id);
 
     }
 

@@ -9,8 +9,6 @@ public class PlayerDie : ExpansionMonoBehaviour, IDieable, IPauseable
     public void Die()
     {
 
-        if (IsPaused) return;
-
         OnDieEvent?.Invoke();
 
     }
