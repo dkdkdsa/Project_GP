@@ -9,6 +9,7 @@ public class NetworkGameManager : NetworkMonoSingleton<NetworkGameManager>
         if (!IsServer) return;
 
         SpawnPlayers();
+        DropItemManager.Instance.StartDrop();
 
     }
 
