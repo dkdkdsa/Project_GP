@@ -19,7 +19,7 @@ public class WeaponItem : ExpansionMonoBehaviour, IItem<IWeaponHandler>, ILocalI
 
         if (targetHandler == null) return;
 
-        var ins = _weaponFactory.CreateInstance(new PrefabData() { prefabKey = "Gun"});
+        var ins = _weaponFactory.CreateInstance(new PrefabData() { prefabKey = "Gun" });
         targetHandler.EquipWeapon(ins);
 
     }
@@ -30,6 +30,9 @@ public class WeaponItem : ExpansionMonoBehaviour, IItem<IWeaponHandler>, ILocalI
         var tag = ObjectManager.Instance.FindGameTag(collision.GetGameObjectId());
 
         if (tag == null) return;
+
+        if (tag.TryGetComponent<IPauseable>(out var compo))
+            if (compo.IsPaused) return;
 
         if (tag.HasTag(Tags.ItemGet))
         {

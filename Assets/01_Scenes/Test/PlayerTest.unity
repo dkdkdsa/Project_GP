@@ -697,7 +697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <FactoryDatas>k__BackingField:
-  - key: 
+  - key: Gun
     obj: {fileID: 3087094555870286170, guid: 14e9fe7f7a240a848a65119001c34d9f, type: 3}
 --- !u!1001 &1660728639
 PrefabInstance:

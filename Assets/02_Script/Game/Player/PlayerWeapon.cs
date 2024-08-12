@@ -11,10 +11,10 @@ public class PlayerWeapon : ExpansionMonoBehaviour, ILocalInject, IWeaponHandler
 
     [SerializeField] private Transform _weaponRoot;
 
-    private Camera _cam;
     private IHandController _handController;
     private IInputContainer _input;
     private IWeapon _weapon;
+    private Camera _cam;
 
     public event Action<PrefabData> OnEquipWeaponEvent;
     public event Action OnUnEquipWeaponEvent;

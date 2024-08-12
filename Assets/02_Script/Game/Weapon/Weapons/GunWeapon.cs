@@ -27,8 +27,8 @@ public class GunWeapon : ExpansionMonoBehaviour, IWeapon, ILocalInject
     public void RotateWeapon(Vector2 dir)
     {
 
-        transform.right = dir;
-        transform.localScale = GetScale(dir);
+        transform.parent.right = dir;
+        transform.parent.localScale = GetScale(dir);
 
     }
 

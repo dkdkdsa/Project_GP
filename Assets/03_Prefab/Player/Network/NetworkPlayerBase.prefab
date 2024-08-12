@@ -73,14 +73,14 @@ PrefabInstance:
       addedObject: {fileID: 6633010629462170274}
     - targetCorrespondingSourceObject: {fileID: 556033700720415468, guid: d825f22a03969924a80712571d76c834, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8006918429424973181}
+      addedObject: {fileID: 1467647691067605588}
   m_SourcePrefab: {fileID: 100100000, guid: d825f22a03969924a80712571d76c834, type: 3}
 --- !u!1 &413278008100267139 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 556033700720415468, guid: d825f22a03969924a80712571d76c834, type: 3}
   m_PrefabInstance: {fileID: 147263763317929583}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8006918429424973181
+--- !u!114 &1467647691067605588
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,16 +89,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 413278008100267139}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
+  m_Script: {fileID: 11500000, guid: 16ecd7afad5207649828563a334903e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   UseUnreliableDeltas: 0
   SyncPositionX: 0
   SyncPositionY: 0
   SyncPositionZ: 0
-  SyncRotAngleX: 0
-  SyncRotAngleY: 0
-  SyncRotAngleZ: 0
+  SyncRotAngleX: 1
+  SyncRotAngleY: 1
+  SyncRotAngleZ: 1
   SyncScaleX: 1
   SyncScaleY: 1
   SyncScaleZ: 1
@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 1320281383
+  GlobalObjectIdHash: 2001172055
   InScenePlacedSourceGlobalObjectIdHash: 0
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
