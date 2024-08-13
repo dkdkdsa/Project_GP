@@ -12,7 +12,7 @@ public interface IWeaponHandler
 
     public void EquipWeapon(IWeapon weapon);
     public void UnEquipWeapon();
-    public void AttackWeapon();
+    public void AttackWeapon(object obj);
     public void RotateWeapon();
 
 }

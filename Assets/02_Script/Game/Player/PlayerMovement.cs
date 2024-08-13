@@ -72,7 +72,7 @@ public class PlayerMovement : ExpansionMonoBehaviour,
 
     }
 
-    public void Jump()
+    public void Jump(object v = null)
     {
 
         if (IsPaused || _isKnockBacked) return;

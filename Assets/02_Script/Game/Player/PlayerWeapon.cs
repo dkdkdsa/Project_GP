@@ -72,14 +72,14 @@ public class PlayerWeapon : ExpansionMonoBehaviour, ILocalInject, IWeaponHandler
 
     }
 
-    public virtual void AttackWeapon()
+    public virtual void AttackWeapon(object obj)
     {
 
         if (_weapon == null) return;
 
         OnAttackWeaponEvent?.Invoke();
 
-        _weapon.Attack();
+        _weapon.Attack(obj.Cast<MouseInputType>());
 
     }
 

@@ -1,6 +1,6 @@
 public interface IJumpable
 {
 
-    public void Jump();
+    public void Jump(object obj = null);
 
 }

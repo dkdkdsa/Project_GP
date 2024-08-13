@@ -1,12 +1,21 @@
+using System.Collections;
 using UnityEngine;
 
-public class GunWeapon : ExpansionMonoBehaviour, IWeapon, ILocalInject
+public abstract class GunWeapon : ExpansionMonoBehaviour, IWeapon, ILocalInject
 {
 
+    [Header("총기 정보")]
+    [SerializeField] private string _bulletPrefabKey;
+    [SerializeField] private int _bulletDamage;
+    [SerializeField] private int _bulletSpeed;
+    [SerializeField] private float _shootDelayTime;
+    [SerializeField] private string _prefabKey;
+    [Header("손")]
     [SerializeField] private Transform _shootTrm;
     [SerializeField] private Transform[] _hands;
 
     private IFactory<IBullet> _bulletFactory;
+    protected bool _shootDelay;
 
     public void LocalInject(ComponentList list)
     {
@@ -15,12 +24,24 @@ public class GunWeapon : ExpansionMonoBehaviour, IWeapon, ILocalInject
 
     }
 
-    public void Attack()
+    public abstract void Attack(MouseInputType inputType);
+
+    protected void ApplyShootDelay()
     {
 
-        _bulletFactory.CreateInstance(new PrefabData() { prefabKey = "" }, 
-            new BulletDataParam () 
-        { speed = 2, position = _shootTrm.position, dir = _shootTrm.right, damage = 1 });
+        if (_shootDelay) return;
+
+        _shootDelay = true;
+        StartCoroutine(ShootDelayCo());
+
+    }
+
+    protected void ShootBullet()
+    {
+
+        _bulletFactory.CreateInstance(new PrefabData() { prefabKey = _bulletPrefabKey },
+         new BulletDataParam()
+         { speed = _bulletSpeed, position = _shootTrm.position, dir = _shootTrm.right, damage = _bulletDamage });
 
     }
 
@@ -65,7 +86,15 @@ public class GunWeapon : ExpansionMonoBehaviour, IWeapon, ILocalInject
     public PrefabData GetPrefabData()
     {
 
-        return new PrefabData() { prefabKey = "Gun" };
+        return new PrefabData() { prefabKey = _prefabKey };
+
+    }
+
+    public IEnumerator ShootDelayCo()
+    {
+
+        yield return new WaitForSeconds(_shootDelayTime);
+        _shootDelay = false;
 
     }
 

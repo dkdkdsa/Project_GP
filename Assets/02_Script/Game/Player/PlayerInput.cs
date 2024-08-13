@@ -3,6 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+public enum MouseInputType
+{
+
+    Up,
+    Down
+
+}
+
 public class PlayerInput : ExpansionMonoBehaviour, IInputContainer, DefaultInput.IPlayerActions, IPauseable
 {
 
@@ -11,7 +19,7 @@ public class PlayerInput : ExpansionMonoBehaviour, IInputContainer, DefaultInput
     private readonly int HASH_JUMP_EVENT_KEY = "JumpEvent".GetHash();
     private readonly int HASH_ATTACK_EVENT_KEY = "AttackEvent".GetHash();
 
-    private Dictionary<int, Action> _eventContainer = new();
+    private Dictionary<int, Action<object>> _eventContainer = new();
     private Dictionary<int, object> _valueContainer = new();
     private DefaultInput _input;
 
@@ -26,7 +34,7 @@ public class PlayerInput : ExpansionMonoBehaviour, IInputContainer, DefaultInput
 
     }
 
-    public void RegisterEvent(int key, Action @event)
+    public void RegisterEvent(int key, Action<object> @event)
     {
 
         if (!_eventContainer.ContainsKey(key))
@@ -40,7 +48,7 @@ public class PlayerInput : ExpansionMonoBehaviour, IInputContainer, DefaultInput
 
     }
 
-    public void UnregisterEvent(int key, Action @event)
+    public void UnregisterEvent(int key, Action<object> @event)
     {
 
         if (!_eventContainer.ContainsKey(key))
@@ -82,7 +90,7 @@ public class PlayerInput : ExpansionMonoBehaviour, IInputContainer, DefaultInput
         if (_eventContainer.ContainsKey(HASH_JUMP_EVENT_KEY) && context.performed)
         {
 
-            _eventContainer[HASH_JUMP_EVENT_KEY]?.Invoke();
+            _eventContainer[HASH_JUMP_EVENT_KEY]?.Invoke(null);
 
         }
 
@@ -94,7 +102,13 @@ public class PlayerInput : ExpansionMonoBehaviour, IInputContainer, DefaultInput
         if (_eventContainer.ContainsKey(HASH_ATTACK_EVENT_KEY) && context.performed)
         {
 
-            _eventContainer[HASH_ATTACK_EVENT_KEY]?.Invoke();
+            _eventContainer[HASH_ATTACK_EVENT_KEY]?.Invoke(MouseInputType.Down);
+
+        }
+        else if (_eventContainer.ContainsKey(HASH_ATTACK_EVENT_KEY) && context.canceled)
+        {
+
+            _eventContainer[HASH_ATTACK_EVENT_KEY]?.Invoke(MouseInputType.Up);
 
         }
 
