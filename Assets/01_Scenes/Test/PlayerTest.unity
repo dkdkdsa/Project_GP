@@ -292,6 +292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2550ad400e0d48d47985cf5bdb93825f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _prefabKey: Gun
 --- !u!212 &338219500
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public interface IMouseEventHandler : IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
+/// <summary>
+/// UI만 사용가능
+/// </summary>
+public interface IUIMouseEventHandler : IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
 {
     /// <summary>
     /// 마우스가 들어왔을때

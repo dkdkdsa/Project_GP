@@ -2,7 +2,7 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class SettingButton : UIComponent, IMouseEventHandler
+public class SettingButton : UIComponent, IUIMouseEventHandler
 {
     public float ScaleDuration = 1f;
     public float RotateSpeed = 1f;

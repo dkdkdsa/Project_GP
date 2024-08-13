@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public interface ILocalInject
+
+public class SelectBox : SelectIcon
 {
-
-    public void LocalInject(ComponentList list);
-
+   
 }
