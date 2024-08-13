@@ -53,7 +53,9 @@ public class NetworkBulletFactory : ExpansionNetworkBehaviour, IFactory<IBullet>
     private void ShootBulletServerRPC(PrefabData prefabData, BulletDataParam data, ulong shootClient)
     {
 
-        Instantiate(_serverBullet).GetComponent<IBullet>().Shoot(data);
+        var blt = Instantiate(_serverBullet).GetComponent<ServerBullet>();
+        blt.Shoot(data);
+        blt.SetOwner(shootClient);
 
         ShootBulletClientRPC(prefabData, data, shootClient.GetRPCParams(false));
 

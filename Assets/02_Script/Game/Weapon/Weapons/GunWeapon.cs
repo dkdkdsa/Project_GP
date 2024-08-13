@@ -20,13 +20,14 @@ public class GunWeapon : ExpansionMonoBehaviour, IWeapon, ILocalInject
 
         _bulletFactory.CreateInstance(new PrefabData() { prefabKey = "" }, 
             new BulletDataParam () 
-        { speed = 3, position = _shootTrm.position, dir = _shootTrm.right });
+        { speed = 2, position = _shootTrm.position, dir = _shootTrm.right, damage = 1 });
 
     }
 
     public void RotateWeapon(Vector2 dir)
     {
 
+        transform.right = dir;
         transform.parent.right = dir;
         transform.parent.localScale = GetScale(dir);
 

@@ -8,6 +8,7 @@ public class NetworkGameManager : NetworkMonoSingleton<NetworkGameManager>
 
         if (!IsServer) return;
 
+        SpawmMapClientRPC(1);
         SpawnPlayers();
         DropItemManager.Instance.StartDrop();
 
@@ -25,9 +26,17 @@ public class NetworkGameManager : NetworkMonoSingleton<NetworkGameManager>
 
     }
 
+    public void AttackPlayer(ulong targetId, ulong attackId)
+    {
+
+        NetworkScoreManager.Instance.CatchAttack(targetId, attackId);
+
+    }
+
     public void DiePlayer(ulong diePlayerId)
     {
 
+        NetworkScoreManager.Instance.CatchDie(diePlayerId);
         RespawnManager.Instance.DiePlayer(diePlayerId, HandleRespawn);
 
     }
@@ -36,6 +45,14 @@ public class NetworkGameManager : NetworkMonoSingleton<NetworkGameManager>
     {
 
         PlayerManager.Instance.SpawnNetworkPlayer(id);
+
+    }
+
+    [ClientRpc]
+    private void SpawmMapClientRPC(int id)
+    {
+
+        MapManager.Instance.LoadMap(id);
 
     }
 

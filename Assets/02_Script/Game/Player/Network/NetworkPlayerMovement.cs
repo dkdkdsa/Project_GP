@@ -8,11 +8,13 @@ public class NetworkPlayerMovement : ExpansionNetworkBehaviour, ILocalInject
 {
 
     private IMoveable _move;
+    private IKnockBackable _knockBack;
 
     public void LocalInject(ComponentList list)
     {
 
         _move = list.Find<IMoveable>();
+        _knockBack = list.Find<IKnockBackable>();
 
     }
 
@@ -25,6 +27,28 @@ public class NetworkPlayerMovement : ExpansionNetworkBehaviour, ILocalInject
             _move.OnChangedInputVector += HandleValueChanged;
 
         }
+
+        if (IsServer && !IsOwner)
+        {
+
+            _knockBack.OnKnockBackEvent += HandleKnockBack;
+
+        }
+
+    }
+
+    private void HandleKnockBack(float force, Vector2 vec)
+    {
+
+        KnockBackClientRPC(force, vec, OwnerClientId.GetRPCParams());
+
+    }
+
+    [ClientRpc]
+    private void KnockBackClientRPC(float force, Vector2 vec, ClientRpcParams @params)
+    {
+
+        _knockBack.KnockBack(force, vec);
 
     }
 

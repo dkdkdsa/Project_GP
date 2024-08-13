@@ -54,6 +54,9 @@ public class PlayerWeapon : ExpansionMonoBehaviour, ILocalInject, IWeaponHandler
 
         }
 
+        _weaponRoot.transform.right = Vector2.right;
+        _weaponRoot.transform.localScale = Vector3.one;
+
         _weapon = weapon;
         _weapon.SetUp(_weaponRoot);
         _handController.SetUpHandPos(_weapon.GetHandPos());

@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class PlayerMovement : ExpansionMonoBehaviour, 
@@ -24,9 +25,12 @@ public class PlayerMovement : ExpansionMonoBehaviour,
     private IPhysics _physics;
     private ISencer _ground;
     private Vector2 _inputVec;
+    private Vector2 _oldInputVec;
     private bool _isRight;
+    private bool _isKnockBacked;
 
     public event Action<Vector2> OnChangedInputVector;
+    public event Action<float, Vector2> OnKnockBackEvent;
 
     public bool IsPaused { get; set; }
 
@@ -45,7 +49,7 @@ public class PlayerMovement : ExpansionMonoBehaviour,
     private void Update()
     {
 
-        if (IsPaused) return;
+        if (IsPaused || _isKnockBacked) return;
 
         SetInputVector(_input.GetValue<Vector2>(HASH_MOVE_VALUE_KEY));
 
@@ -71,7 +75,7 @@ public class PlayerMovement : ExpansionMonoBehaviour,
     public void Jump()
     {
 
-        if (IsPaused) return;
+        if (IsPaused || _isKnockBacked) return;
 
         if (_ground.IsSencing())
         {
@@ -126,18 +130,49 @@ public class PlayerMovement : ExpansionMonoBehaviour,
     public void SetInputVector(Vector2 vec)
     {
 
-        if (_inputVec == vec)
+        if (_inputVec == vec || _isKnockBacked)
             return;
 
         _inputVec = vec;
+
+        if(_inputVec != Vector2.zero)
+            _oldInputVec = _inputVec;
+
         OnChangedInputVector?.Invoke(vec);
 
     }
 
-    public void KnockBack(float force)
+    public void KnockBack(float force, Vector2 dir)
     {
 
-        _physics.AddFource(-_inputVec + Vector2.up);
+        OnKnockBackEvent?.Invoke(force, dir);
+
+        if (IsPaused) return;
+
+        _isKnockBacked = true;
+        _physics.AddFource((dir * force) + (Vector2.up * (force / 2)));
+
+        StartCoroutine(PauseDelayCo());
+
+    }
+
+    private IEnumerator PauseDelayCo()
+    {
+
+        yield return new WaitForSeconds(0.05f);
+
+        float t = 0.2f;
+
+        yield return new WaitUntil(() =>
+        {
+
+            t -= Time.deltaTime;
+
+            return t <= 0 || _ground.IsSencing();
+
+        });
+
+        _isKnockBacked = false;
 
     }
 
