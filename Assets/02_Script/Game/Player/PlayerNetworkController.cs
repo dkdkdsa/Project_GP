@@ -12,7 +12,7 @@ public class PlayerNetworkController : ExpansionNetworkBehaviour, ILocalInject, 
 
     }
 
-    public void Start()
+    public override void OnNetworkSpawn()
     {
 
         if (!IsOwner)
@@ -26,6 +26,8 @@ public class PlayerNetworkController : ExpansionNetworkBehaviour, ILocalInject, 
             }
 
         }
+        else
+            CameraManager.Instance.SetFollow(transform);
 
     }
 
