@@ -8,6 +8,7 @@ public class NetworkGameManager : NetworkMonoSingleton<NetworkGameManager>
 
         if (!IsServer) return;
 
+        SpawmMapClientRPC(1);
         SpawnPlayers();
         DropItemManager.Instance.StartDrop();
 
@@ -44,6 +45,14 @@ public class NetworkGameManager : NetworkMonoSingleton<NetworkGameManager>
     {
 
         PlayerManager.Instance.SpawnNetworkPlayer(id);
+
+    }
+
+    [ClientRpc]
+    private void SpawmMapClientRPC(int id)
+    {
+
+        MapManager.Instance.LoadMap(id);
 
     }
 
