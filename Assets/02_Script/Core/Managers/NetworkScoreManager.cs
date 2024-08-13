@@ -1,11 +1,10 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class NetworkScoreManager : NetworkMonoSingleton<NetworkScoreManager>
 {
-    
+
     private class AttackObjectData
     {
 
@@ -23,7 +22,7 @@ public class NetworkScoreManager : NetworkMonoSingleton<NetworkScoreManager>
     public void CatchAttack(ulong targetClient, ulong attackClient)
     {
 
-        if(!_attackDataContainer.ContainsKey(targetClient))
+        if (!_attackDataContainer.ContainsKey(targetClient))
         {
 
             _attackDataContainer.Add(targetClient, new AttackObjectData());
@@ -49,7 +48,7 @@ public class NetworkScoreManager : NetworkMonoSingleton<NetworkScoreManager>
         if (_attackDataContainer.TryGetValue(dieClientId, out var v))
         {
 
-            if(v.attackClientId != ulong.MaxValue)
+            if (v.attackClientId != ulong.MaxValue)
             {
 
                 AddScore(v.attackClientId);
@@ -63,7 +62,7 @@ public class NetworkScoreManager : NetworkMonoSingleton<NetworkScoreManager>
     private void AddScore(ulong target)
     {
 
-        if(!_scoreContainer.ContainsKey(target))
+        if (!_scoreContainer.ContainsKey(target))
         {
 
             _scoreContainer.Add(target, 0);
