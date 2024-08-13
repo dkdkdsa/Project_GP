@@ -25,9 +25,17 @@ public class NetworkGameManager : NetworkMonoSingleton<NetworkGameManager>
 
     }
 
+    public void AttackPlayer(ulong targetId, ulong attackId)
+    {
+
+        NetworkScoreManager.Instance.CatchAttack(targetId, attackId);
+
+    }
+
     public void DiePlayer(ulong diePlayerId)
     {
 
+        NetworkScoreManager.Instance.CatchDie(diePlayerId);
         RespawnManager.Instance.DiePlayer(diePlayerId, HandleRespawn);
 
     }

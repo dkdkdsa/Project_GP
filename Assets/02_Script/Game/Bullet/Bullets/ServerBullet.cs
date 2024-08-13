@@ -3,6 +3,15 @@ using UnityEngine;
 public class ServerBullet : Bullet
 {
 
+    private ulong _ownerClientId;
+
+    public void SetOwner(ulong owner)
+    {
+
+        _ownerClientId = owner;
+
+    }
+
     protected override void OnTargetHit(GameTag tag, Vector2 point)
     {
 
@@ -10,6 +19,13 @@ public class ServerBullet : Bullet
         {
 
             tag.GetComponent<IDamageable>().TakeDamage(_damage);
+
+            if (tag.TryGetComponent<INetworkObjectController>(out var compo))
+            {
+
+                NetworkGameManager.Instance.AttackPlayer(compo.GetOwner(), _ownerClientId);
+
+            }
 
         }
 
