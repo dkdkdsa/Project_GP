@@ -19,8 +19,6 @@ public class NetworkSelectIconTarget : ExpansionNetworkBehaviour, ILocalInject
     public override void OnNetworkSpawn()
     {
 
-        if (!IsOwner) return;
-
         _handler.OnShowSelectIconEvent += HandleShowIcon;
         _handler.OnHideSelectIconEvent += HandleHideIcon;
 
@@ -28,43 +26,40 @@ public class NetworkSelectIconTarget : ExpansionNetworkBehaviour, ILocalInject
 
     private void HandleShowIcon(SelectIconType type)
     {
-        ShowIconServerRPC(type);
+        ShowIconServerRPC(type, NetworkManager.LocalClientId);
     }
 
     private void HandleHideIcon()
     {
-        HideIconServerRPC();
+        HideIconServerRPC(NetworkManager.LocalClientId);
     }
 
-    [ServerRpc]
-    private void ShowIconServerRPC(SelectIconType type)
+    [ServerRpc(RequireOwnership = false)]
+    private void ShowIconServerRPC(SelectIconType type, ulong localClientId)
     {
 
-        ShowIconClientRPC(type);
+        ShowIconClientRPC(type, localClientId.GetRPCParams(false));
 
     }
 
-    [ServerRpc]
-    private void HideIconServerRPC()
+    [ServerRpc(RequireOwnership = false)]
+    private void HideIconServerRPC(ulong localClientId)
     {
-        HideIconClientRPC();
+        HideIconClientRPC(localClientId.GetRPCParams(false));
     }
 
     [ClientRpc]
-    private void ShowIconClientRPC(SelectIconType type)
+    private void ShowIconClientRPC(SelectIconType type, ClientRpcParams clientRpcParams)
     {
-
-        if (IsOwner) return;
 
         _handler.SetShowSelectIconType(type);
-        _handler.ShowSelectIcon(_rootTrm);
+        _handler.DoShowSelectIcon();
     }
 
     [ClientRpc]
-    private void HideIconClientRPC()
+    private void HideIconClientRPC(ClientRpcParams clientRpcParams)
     {
-        if (IsOwner) return;
 
-        _handler.HideSelectIcon();
+        _handler.DoHideSelectIcon();
     }
 }

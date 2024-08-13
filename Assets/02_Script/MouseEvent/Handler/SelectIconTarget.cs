@@ -1,6 +1,7 @@
 using ControllerSystem;
 using System;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 
 [RequireComponent(typeof(NetworkSelectIconTarget))]
@@ -26,22 +27,20 @@ public class SelectIconTarget : ExpansionMonoBehaviour, ISelectHandler, ILocalIn
     public void OnMouseEnter()
     {
         SetShowSelectIconType(_controller.GetSelectIconType());
-        ShowSelectIcon(_rootTrm);
+        ShowSelectIcon();
     }
 
     public void OnMouseExit()
     {
         HideSelectIcon();
     }
-
-
-    public void ShowSelectIcon(Transform trm)
+    public void ShowSelectIcon()
     {
         { if (!IsUsed) return; }
 
         if (_icon != null)
         {
-            _icon.ShowSelectIcon(_rootTrm);
+            DoShowSelectIcon();
             OnShowSelectIconEvent?.Invoke(_controller.GetSelectIconType());
         }
     }
@@ -52,12 +51,28 @@ public class SelectIconTarget : ExpansionMonoBehaviour, ISelectHandler, ILocalIn
 
         if (_icon != null)
         {
-            _icon.HideSelectIcon();
+            DoHideSelectIcon();
             OnHideSelectIconEvent?.Invoke();
         }
+    }
+
+    public void DoShowSelectIcon()
+    {
+        _icon.ShowSelectIcon(_rootTrm);
+
+    }
+
+    public void DoHideSelectIcon()
+    {
+        _icon.HideSelectIcon();
+
     }
     public void SetShowSelectIconType(SelectIconType type)
     {
         _icon = _factory.CreateInstance(default, type);
     }
+
+
+
+
 }
