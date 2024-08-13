@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -9,7 +10,7 @@ public interface IController<T> : IControllerable
     public IController<T> GetController();
 }
 
-public interface IControllerable 
+public interface IControllerable
 {
     public abstract void Init();
 }
@@ -22,7 +23,6 @@ public class ControllerContainer : MonoSingleton<ControllerContainer>
     {
         if (_controllers == null)
             InitContainer();
-
     }
 
     private void InitContainer()
@@ -30,7 +30,7 @@ public class ControllerContainer : MonoSingleton<ControllerContainer>
 
         _controllers = GetComponentsInChildren<IControllerable>().ToList();
 
-        foreach(var item in _controllers)
+        foreach (var item in _controllers)
         {
             item.Init();
         }
