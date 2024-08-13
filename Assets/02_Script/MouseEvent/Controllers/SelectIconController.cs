@@ -5,10 +5,11 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 
-public class SelectIconController : MouseEventController, IMouseEvent<ISelectIcon>
+public class SelectIconController : ExpansionMonoBehaviour, IController<ISelectIcon>
 {
 
     private SelectIconType _type = SelectIconType.None;
+    public Action<SelectIconType> OnChangedTypeEvent = null;
 
     #region Property
 
@@ -24,6 +25,8 @@ public class SelectIconController : MouseEventController, IMouseEvent<ISelectIco
             if (_type != value)
             {
                 _type = value;
+
+                OnChangedTypeEvent?.Invoke(_type);
                 OnChangedType(_type);
             }
         }
@@ -31,19 +34,15 @@ public class SelectIconController : MouseEventController, IMouseEvent<ISelectIco
 
     #endregion
 
-    public override void Init()
+    public void Init()
     {
-
+        //임시
+        ChangedSelectIconType(SelectIconType.Box);
     }
 
-    public override void OnMouseEnter() 
+    public SelectIconType GetSelectIconType()
     {
-        base.OnMouseEnter();
-
-        if (hitObject.TryGetComponent<ISelectable>(out var compo))
-        {
-            compo.SetShowSelectIconType(_type);
-        }
+        return _type;
     }
 
     public void ChangedSelectIconType(SelectIconType type)
@@ -58,7 +57,7 @@ public class SelectIconController : MouseEventController, IMouseEvent<ISelectIco
     private void OnChangedType(SelectIconType type) { }
 
 
-    public IMouseEvent<ISelectIcon> GetController()
+    public IController<ISelectIcon> GetController()
     {
         return this;
     }

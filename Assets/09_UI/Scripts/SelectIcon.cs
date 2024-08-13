@@ -39,8 +39,9 @@ public abstract class SelectIcon : ExpansionMonoBehaviour, ISelectIcon, ILocalIn
         transform.parent = null;
 
         if (_coroutine != null) StopCoroutine(_coroutine);
-
         _coroutine = StartCoroutine(LerpSelectBoxSize(0f, 0f, duration));
+
+        Destroy(gameObject, duration);
     }
 
     private IEnumerator LerpSelectBoxSize(float width, float height, float duration)
@@ -53,7 +54,6 @@ public abstract class SelectIcon : ExpansionMonoBehaviour, ISelectIcon, ILocalIn
         {
             elapsed += Time.deltaTime;
             float t = Mathf.Clamp01(elapsed / duration);
-            Debug.Log("wer");
             float currentX = Mathf.Lerp(startX, width, t);
             float currentY = Mathf.Lerp(startY, height, t);
 
