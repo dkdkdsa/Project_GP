@@ -1,4 +1,6 @@
+using System.Collections;
 using Unity.Netcode;
+using UnityEngine;
 
 public class NetworkGameManager : NetworkMonoSingleton<NetworkGameManager>
 {
@@ -11,6 +13,16 @@ public class NetworkGameManager : NetworkMonoSingleton<NetworkGameManager>
         SpawmMapClientRPC(1);
         SpawnPlayers();
         DropItemManager.Instance.StartDrop();
+        StartCoroutine(WaitEndCo());
+
+    }
+
+    private void EndGame()
+    {
+
+        ulong winClientId = NetworkScoreManager.Instance.GetHighScoreId();
+
+        Debug.Log($"Win! : {winClientId}");
 
     }
 
@@ -53,6 +65,15 @@ public class NetworkGameManager : NetworkMonoSingleton<NetworkGameManager>
     {
 
         MapManager.Instance.LoadMap(id);
+
+    }
+
+    private IEnumerator WaitEndCo()
+    {
+
+        yield return new WaitForSeconds(30f);
+
+        EndGame();
 
     }
 

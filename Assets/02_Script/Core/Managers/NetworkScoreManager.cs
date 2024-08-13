@@ -84,5 +84,28 @@ public class NetworkScoreManager : NetworkMonoSingleton<NetworkScoreManager>
 
     }
 
+    public ulong GetHighScoreId()
+    {
+
+        int minScore = int.MinValue;
+        ulong targetId = ulong.MaxValue;
+
+        foreach(var item in _scoreContainer) 
+        { 
+            
+            if(item.Value > minScore)
+            {
+
+                minScore = item.Value;
+                targetId = item.Key;
+
+            }
+        
+        }
+
+        return targetId;
+
+    }
+
 
 }
