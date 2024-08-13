@@ -11,7 +11,7 @@ public class SpriteRendererProvider : MonoBehaviour, IRenderer
 
     private void Awake()
     {
-        
+
         _renderer = GetComponent<SpriteRenderer>();
 
     }
@@ -19,7 +19,7 @@ public class SpriteRendererProvider : MonoBehaviour, IRenderer
     public bool2 GetFlip()
     {
 
-        return new bool2( _renderer.flipX, _renderer.flipY );
+        return new bool2(_renderer.flipX, _renderer.flipY);
 
     }
 
@@ -31,4 +31,17 @@ public class SpriteRendererProvider : MonoBehaviour, IRenderer
 
     }
 
+    /// <summary>
+    /// 처음 인자가 Width, 두번째 인자가 Height
+    /// </summary>
+    /// <returns></returns>
+    public (float, float) GetSpriteSize()
+    {
+        return (_renderer.size.x, _renderer.size.y);
+    }
+
+    public void SetSpriteSize(float width, float height)
+    {
+        _renderer.size = new Vector2(width, height);
+    }
 }

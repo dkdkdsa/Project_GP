@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Obstacle
+    uniqueID: 751388415
+    locked: 0
+  - name: UI
+    uniqueID: 4011399037
+    locked: 0
+  - name: TopLayer
+    uniqueID: 584913117
+    locked: 0
