@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
+[RequireComponent(typeof(LocalInstaller))]
 public abstract class GunWeapon : ExpansionMonoBehaviour, IWeapon, ILocalInject
 {
 
