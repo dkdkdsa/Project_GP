@@ -292,7 +292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2550ad400e0d48d47985cf5bdb93825f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabKey: AutoGun_1
+  _prefabKey: SemiAutoGun_1
 --- !u!212 &338219500
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -702,6 +702,8 @@ MonoBehaviour:
     obj: {fileID: 3087094555870286170, guid: 14e9fe7f7a240a848a65119001c34d9f, type: 3}
   - key: AutoGun_1
     obj: {fileID: 8238526607188283332, guid: 169124a591f82f34c9463875ce545b7a, type: 3}
+  - key: SemiAutoGun_1
+    obj: {fileID: 6028007582202150096, guid: e1e09e22b2671dc4f8f2101ce8c0a4ca, type: 3}
 --- !u!1001 &1660728639
 PrefabInstance:
   m_ObjectHideFlags: 0
