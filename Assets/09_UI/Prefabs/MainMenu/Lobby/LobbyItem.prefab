@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 1367489696088349555}
   - component: {fileID: 512270370935592973}
   - component: {fileID: 8128185754741326152}
-  - component: {fileID: -7023822261190862239}
+  - component: {fileID: 1615974420673192778}
   m_Layer: 5
   m_Name: LobbyItem
   m_TagString: Untagged
@@ -335,8 +335,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 512270370935592973}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
---- !u!114 &-7023822261190862239
+      m_Calls:
+      - m_Target: {fileID: 1615974420673192778}
+        m_TargetAssemblyTypeName: LobbyItem, Assembly-CSharp
+        m_MethodName: OnJoinRoom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1615974420673192778
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -345,9 +357,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 5844079043139585544}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4aa7d4e446a83f14aa1e7b72ea2a1cc6, type: 3}
+  m_Script: {fileID: 11500000, guid: 1562ca32eb009ea4da02a60f5e2a13aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _hostPlayerNameTxt: {fileID: 2541721842185099410}
+  _LobbyNameTxt: {fileID: 6299622743073850042}
+  _playerCountTxt: {fileID: 1609046409216227433}
+  _playerMaxCountTxt: {fileID: 287167780422073205}
 --- !u!1 &6056372589243829016
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,7 +398,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -98, y: 0}
+  m_AnchoredPosition: {x: -79, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5842671653204137368
@@ -516,7 +532,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -251, y: 0}
+  m_AnchoredPosition: {x: -245, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7671860692753583349
@@ -547,7 +563,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uC131\uD638"
+  m_text: "\uAE40\uC131\uD638\uB2E4"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ede42a42977c76d4682cdcb2cb3f398e, type: 2}
   m_sharedMaterial: {fileID: -6863435781960407084, guid: ede42a42977c76d4682cdcb2cb3f398e, type: 2}

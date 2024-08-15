@@ -1,18 +1,36 @@
-using System.Collections;
+using ExtensionMethod.List;
 using System.Collections.Generic;
+using Unity.Services.Lobbies.Models;
 using UnityEngine;
 
 public class LobbyItemContrainer : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Transform _spawnTrm = null;
+    [SerializeField] private LobbyItem _prefab = null;
+    private List<LobbyItem> _lobbyItemList = new();
+
+
+    public void OnSearch()
     {
-        
+        ModifyAsync();
     }
 
-    // Update is called once per frame
-    void Update()
+    private async void ModifyAsync()
     {
-        
+        _lobbyItemList.TryClear(item => Destroy(item));
+
+        List<Lobby> lobbyList = await AppController.Instance.GetLobbyList();
+
+        foreach (var lobby in lobbyList)
+        {
+            LobbyItem obj = Instantiate(_prefab, _spawnTrm);
+            _lobbyItemList.Add(obj);
+
+            LobbyItemData item = new LobbyItemData(_prefab, lobby);
+            item.Modify();
+
+
+        } //end foreach
     }
+
 }
