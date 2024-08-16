@@ -18,8 +18,22 @@ public class LobbyItemContrainer : MonoBehaviour
     private async void ModifyAsync()
     {
         _lobbyItemList.TryClear(item => Destroy(item));
+        List<Lobby> lobbyList = new();
 
-        List<Lobby> lobbyList = await AppController.Instance.GetLobbyList();
+        try
+        {
+            lobbyList = await AppController.Instance.GetLobbyList();
+        }
+        catch
+        {
+
+        }
+
+        if (lobbyList.Equals(new()))
+        {
+            Debug.LogError("로비가 비어있다");  
+            return;
+        }
 
         foreach (var lobby in lobbyList)
         {
