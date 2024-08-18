@@ -16,7 +16,8 @@ public struct LobbyItemData
 
     public void Modify()
     {
-        _prefab.SetLobbyName(_lobby.Name);
+        _prefab.SetLobbyName(_lobby.Name);  
+        _prefab.SetHostPlayerName(_lobby.Data["UserName"].Value);
         _prefab.SetPlayerCount(int.Parse(_lobby.Data["Players"].Value), _lobby.MaxPlayers);
         _prefab.SetJoincode(_lobby.Data["JoinCode"].Value);
     }

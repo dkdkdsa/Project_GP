@@ -6,10 +6,10 @@ using UnityEngine;
 
 public class LobbyItem : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI _hostPlayerNameTxt = null;
-    [SerializeField] private TextMeshProUGUI _LobbyNameTxt = null;
-    [SerializeField] private TextMeshProUGUI _playerCountTxt = null;
-    [SerializeField] private TextMeshProUGUI _playerMaxCountTxt = null;
+    public TextMeshProUGUI HostPlayerNameTxt = null;
+    public TextMeshProUGUI LobbyNameTxt = null;
+    public TextMeshProUGUI PlayerCountTxt = null;
+    public TextMeshProUGUI PlayerMaxCountTxt = null;
 
     private string _joincode = string.Empty;
     private int _maxPlayerCount = 4;
@@ -19,12 +19,12 @@ public class LobbyItem : MonoBehaviour
 
     public void SetHostPlayerName(string playerName)
     {
-        _hostPlayerNameTxt.text = playerName;
+        HostPlayerNameTxt.text = playerName;
     }
 
     public void SetLobbyName(string lobbyName)
     {
-        _LobbyNameTxt.text = lobbyName;
+        LobbyNameTxt.text = lobbyName; 
     }
 
     public void SetPlayerCount(int playerCount, int maxCount = 4)
@@ -32,8 +32,8 @@ public class LobbyItem : MonoBehaviour
         _playerCount = playerCount;
         _maxPlayerCount = maxCount;
 
-        _playerCountTxt.text = _playerCount.ToString();
-        _playerMaxCountTxt.text = _maxPlayerCount.ToString();
+        PlayerCountTxt.text = _playerCount.ToString();
+        PlayerMaxCountTxt.text = _maxPlayerCount.ToString();
     }
 
     public void SetJoincode(string joincode)

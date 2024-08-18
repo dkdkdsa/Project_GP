@@ -53,7 +53,7 @@ public class HostGameManager : IDisposable
 
                 {
 
-                    "UserName", new DataObject(DataObject.VisibilityOptions.Member, value: userData.nickName)
+                    "UserName", new DataObject(DataObject.VisibilityOptions.Public, value: userData.nickName)
 
                 },
 

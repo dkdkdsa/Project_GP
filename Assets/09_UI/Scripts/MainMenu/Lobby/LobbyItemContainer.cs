@@ -17,7 +17,7 @@ public class LobbyItemContrainer : MonoBehaviour
 
     private async void ModifyAsync()
     {
-        _lobbyItemList.TryClear(item => Destroy(item));
+        _lobbyItemList.TryClear(item => Destroy(item.gameObject));
         List<Lobby> lobbyList = new();
 
         try
@@ -31,7 +31,7 @@ public class LobbyItemContrainer : MonoBehaviour
 
         if (lobbyList.Equals(new()))
         {
-            Debug.LogError("로비가 비어있다");  
+            Debug.LogError("로비가 비어있다");
             return;
         }
 
@@ -40,7 +40,7 @@ public class LobbyItemContrainer : MonoBehaviour
             LobbyItem obj = Instantiate(_prefab, _spawnTrm);
             _lobbyItemList.Add(obj);
 
-            LobbyItemData item = new LobbyItemData(_prefab, lobby);
+            LobbyItemData item = new LobbyItemData(obj, lobby);
             item.Modify();
 
 
