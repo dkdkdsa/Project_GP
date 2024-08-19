@@ -66,14 +66,15 @@ public class AppController : MonoSingleton<AppController>
 
     }
 
-    private UserData GetUserData(string username)
+    public UserData GetUserData(string username, Color color = default)
     {
 
         return new UserData
         {
 
             nickName = username,
-            authId = AuthenticationService.Instance.PlayerId
+            authId = AuthenticationService.Instance.PlayerId,
+            color = color,
 
         };
 

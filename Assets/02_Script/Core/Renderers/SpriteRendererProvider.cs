@@ -44,4 +44,11 @@ public class SpriteRendererProvider : MonoBehaviour, IRenderer
     {
         _renderer.size = new Vector2(width, height);
     }
+
+    public void SetColor(int id, Color color)
+    {
+
+        _renderer.material.SetColor(id, color);
+
+    }
 }

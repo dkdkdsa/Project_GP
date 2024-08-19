@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerWeapon : ExpansionMonoBehaviour, ILocalInject, IWeaponHandler, IPauseable
@@ -47,7 +45,7 @@ public class PlayerWeapon : ExpansionMonoBehaviour, ILocalInject, IWeaponHandler
 
         OnEquipWeaponEvent?.Invoke(weapon.GetPrefabData());
 
-        if(_weapon != null)
+        if (_weapon != null)
         {
 
             _weapon.Release();
@@ -106,8 +104,8 @@ public class PlayerWeapon : ExpansionMonoBehaviour, ILocalInject, IWeaponHandler
 
     private void OnDestroy()
     {
-        
-        if(_input != null)
+
+        if (_input != null)
         {
 
             _input.UnregisterEvent(HASH_ATTACK_EVENT_KEY, AttackWeapon);

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class NetworkDebugScript : MonoBehaviour
 {
@@ -14,14 +15,14 @@ public class NetworkDebugScript : MonoBehaviour
     {
 
         _ui.SetActive(false);
-        await HostSingle.Instance.GameManager.StartHostAsync(Guid.NewGuid().ToString(), default);
+        await HostSingle.Instance.GameManager.StartHostAsync(Guid.NewGuid().ToString(), AppController.Instance.GetUserData("ADSF", Random.ColorHSV()));
 
     }
 
     public async void JoinRoom()
     {
 
-        await ClientSingle.Instance.GameManager.StartClientAsync(_inputField.text, default);
+        await ClientSingle.Instance.GameManager.StartClientAsync(_inputField.text, AppController.Instance.GetUserData("ADSF", Random.ColorHSV()));
         _ui.SetActive(false);
 
     }
