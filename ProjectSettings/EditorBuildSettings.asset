@@ -11,5 +11,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/01_Scenes/Test/NetworkTest.unity
     guid: 3a7535639c0f67d408da97b086e0ccf4
+  - enabled: 1
+    path: Assets/01_Scenes/Test/MainMenuSceneTest.unity
+    guid: 7ea1f4252d836ae4f9a27a81e4675908
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 7a5143419c0b8ef4d9fa4fcace349f97, type: 2}
