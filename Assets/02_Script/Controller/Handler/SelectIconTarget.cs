@@ -4,8 +4,6 @@ using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
 
-[RequireComponent(typeof(NetworkSelectIconTarget))]
-[RequireComponent(typeof(LocalInstaller))]
 public class SelectIconTarget : ExpansionMonoBehaviour, ISelectHandler, ILocalInject
 {
     public bool IsUsed = true;
