@@ -1,27 +1,27 @@
-using Unity.Netcode.Components;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class Player : ExpansionMonoBehaviour, ILocalInject, IHp, IDamageable
+public class Box : ObstacleComponent, ILocalInject, IHp, IDamageable
 {
-    
     private readonly int HASH_MAX_HP = "MaxHp".GetHash();
 
-    private IKnockBackable _knockBack;
-    private IStatContainer _stat;
 
+    public float HaxHp = 10;
+    public UnityEvent OnDiedEvent = null;
+
+    private IKnockBackable _knockBack;
     private float _currentHp;
 
     public void LocalInject(ComponentList list)
     {
-
-        _stat = list.Find<IStatContainer>();
         _knockBack = list.Find<IKnockBackable>();
-
     }
 
     private void Awake()
     {
-        
+
         _currentHp = GetMaxHp();
 
     }
@@ -48,6 +48,13 @@ public class Player : ExpansionMonoBehaviour, ILocalInject, IHp, IDamageable
         _currentHp -= hp;
         _currentHp = Mathf.Clamp(_currentHp, 0, GetMaxHp());
 
+
+        if (_currentHp <= 0)
+        {
+            OnDiedEvent?.Invoke();
+        }
+
+
     }
 
     public void TakeDamage(float damage)
@@ -68,8 +75,7 @@ public class Player : ExpansionMonoBehaviour, ILocalInject, IHp, IDamageable
     public float GetMaxHp()
     {
 
-        return _stat[HASH_MAX_HP].Value;
+        return HaxHp;
 
     }
-
 }

@@ -6,24 +6,32 @@ using UnityEngine;
 public class DataManager : MonoSingleton<DataManager>
 {
 
-    #region PlayerName
-
     private string _playerName = "";
+    private string _roomName = "";
 
     public string PlayerName
     {
         get => _playerName;
         set
         {
-            string prevNmae = _playerName;
+            string prevPlayerName = _playerName;
 
             _playerName = value;
-            OnChangedPlayerNameEvent?.Invoke(prevNmae, _playerName);
+            OnChangedPlayerNameEvent?.Invoke(prevPlayerName, _playerName);
+        }
+    }
+
+    public string RoomName
+    {
+        get => _roomName;
+        set
+        {
+            string prevRoomName = _roomName;
+
+            _roomName = value;
         }
     }
 
     public Action<string, string> OnChangedPlayerNameEvent = null;
-
-    #endregion
 
 }
