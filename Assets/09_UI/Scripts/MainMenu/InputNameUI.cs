@@ -26,6 +26,24 @@ public class InputNameUI : UIComponent
         _inputNameField.onEndEdit.RemoveListener(OnCheck);
     }
 
+    public void OnCheck()
+    {
+        string inputText = _inputNameField.text.Trim();
+
+        if (IsValidName(inputText))
+        {
+            DataManager.Instance.PlayerName = inputText;
+
+            OnSuccessEvent?.Invoke();
+            Debug.Log("성공");
+        }
+        else
+        {
+            OnFailureEvent?.Invoke();
+            Debug.Log("실패");
+        }
+    }
+
     private void OnCheck(string inputText)
     {
         inputText = inputText.Trim();

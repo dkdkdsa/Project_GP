@@ -1,9 +1,9 @@
 public enum PlayerColorType
 {
-    None = 0,
+    None = -1,
     Red,
+    Purple,
     Green,
-    Blue,
     Yellow,
     //...
     End,

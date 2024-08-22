@@ -8,6 +8,7 @@ public class DataManager : MonoSingleton<DataManager>
 
     private string _playerName = "";
     private string _roomName = "";
+    private PlayerColorType _colorType = PlayerColorType.None;
 
     public string PlayerName
     {
@@ -29,6 +30,17 @@ public class DataManager : MonoSingleton<DataManager>
             string prevRoomName = _roomName;
 
             _roomName = value;
+        }
+    }
+
+    public PlayerColorType PlayerColorType
+    {
+        get => _colorType;
+        set
+        {
+            PlayerColorType prevColorType = _colorType;
+
+            _colorType = value;
         }
     }
 

@@ -6,9 +6,10 @@ namespace ControllerSystem
 {
     public static class Controller
     {
-        public static IController<T> GetController<T>()
+
+        public static T GetController<T>()
         {
-            return ControllerContainer.Instance.GetController<T>();
+            return ControllerContainer.Instance.GetController<IController<T>>().Cast<T>();
         }
     }
 }

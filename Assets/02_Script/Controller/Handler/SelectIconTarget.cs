@@ -19,7 +19,7 @@ public class SelectIconTarget : ExpansionMonoBehaviour, ISelectHandler, ILocalIn
     public void LocalInject(ComponentList list)
     {
         _factory = Factory.GetFactory<ISelectIcon>();
-        _controller = Controller.GetController<ISelectIcon>().Cast<SelectIconController>();
+        _controller = Controller.GetController<SelectIconController>();
     }
 
     public void OnMouseEnter()
