@@ -9,7 +9,12 @@ namespace ControllerSystem
 
         public static T GetController<T>()
         {
-            return ControllerContainer.Instance.GetController<IController<T>>().Cast<T>();
+            return ControllerContainer.Instance.GetController<T>();
+        }
+
+        public static IController<T> GetIController<T>()
+        {
+            return ControllerContainer.Instance.GetIController<T>();
         }
     }
 }

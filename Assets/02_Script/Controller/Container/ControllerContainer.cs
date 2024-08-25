@@ -36,7 +36,7 @@ public class ControllerContainer : MonoSingleton<ControllerContainer>
         }
     }
 
-    public IController<T> GetController<T>()
+    public IController<T> GetIController<T>()
     {
 
         if (_controllers == null)
@@ -52,6 +52,22 @@ public class ControllerContainer : MonoSingleton<ControllerContainer>
 
         return null;
 
+    }
+
+    public 이준서 GetController<이준서>()
+    {
+        if (_controllers == null)
+            InitContainer();
+
+        foreach (var item in _controllers)
+        {
+
+            if (item is 이준서)
+                return item.Cast<이준서>();
+
+        }
+
+        return default;
     }
 
 }
