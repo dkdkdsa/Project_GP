@@ -29,6 +29,9 @@ public class FeedbackPlayer : ExpansionMonoBehaviour, ILocalInject
         GetComponents(_feedbackToPlay);
     }
 
+    /// <summary>
+    /// 가지고 있는 피드백을 전부 실행 및 결과를 받아옴
+    /// </summary>
     public void PlayFeedback()
     {
         FinishFeedback();
@@ -44,6 +47,10 @@ public class FeedbackPlayer : ExpansionMonoBehaviour, ILocalInject
         }
     }
 
+
+    /// <summary>
+    /// 가지고 있는 피드백을 전부 종료
+    /// </summary>
     public void FinishFeedback()
     {
         foreach (Feedback f in _feedbackToPlay)
