@@ -30,7 +30,6 @@ public class BoxHitCaster : ExpansionMonoBehaviour, IHitCaster
             if (tag.HasTag(Tags.Damageable))
             {
 
-                Debug.Log(2);
                 tag.GetComponent<IDamageable>().TakeDamage(data.damage);
 
             }
@@ -43,7 +42,7 @@ public class BoxHitCaster : ExpansionMonoBehaviour, IHitCaster
     {
 
         var hits = Casting(data);
-        Debug.Log(-1);
+
         if (hits == null)
             return;
 
@@ -52,7 +51,7 @@ public class BoxHitCaster : ExpansionMonoBehaviour, IHitCaster
 
             if (tag.HasTag(Tags.KnockBackable))
             {
-                Debug.Log(3);
+
                 var hp = tag.GetComponent<IHp>();
 
                 tag.GetComponent<IKnockBackable>()
