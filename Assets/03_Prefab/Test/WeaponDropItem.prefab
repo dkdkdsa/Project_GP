@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 794705794
+  GlobalObjectIdHash: 320416400
   InScenePlacedSourceGlobalObjectIdHash: 0
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -208,7 +208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2801a719bae6a7142b1c63ca56c1d794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabKey: Gun
+  _prefabKey: TestWeapon
   _getAndDestroy: 1
 --- !u!114 &7106614517681481776
 MonoBehaviour:

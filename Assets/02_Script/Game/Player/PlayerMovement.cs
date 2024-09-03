@@ -25,7 +25,6 @@ public class PlayerMovement : ExpansionMonoBehaviour,
     private IPhysics _physics;
     private ISencer _ground;
     private Vector2 _inputVec;
-    private Vector2 _oldInputVec;
     private bool _isRight;
     private bool _isKnockBacked;
 
@@ -134,9 +133,6 @@ public class PlayerMovement : ExpansionMonoBehaviour,
             return;
 
         _inputVec = vec;
-
-        if(_inputVec != Vector2.zero)
-            _oldInputVec = _inputVec;
 
         OnChangedInputVector?.Invoke(vec);
 

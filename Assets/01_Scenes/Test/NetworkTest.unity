@@ -1479,6 +1479,8 @@ MonoBehaviour:
   <FactoryDatas>k__BackingField:
   - key: Gun
     obj: {fileID: 3087094555870286170, guid: 14e9fe7f7a240a848a65119001c34d9f, type: 3}
+  - key: TestWeapon
+    obj: {fileID: 6809355002845052049, guid: c22a35b6ff5c78b47a508c97b4754fe8, type: 3}
 --- !u!1 &1567035564
 GameObject:
   m_ObjectHideFlags: 3

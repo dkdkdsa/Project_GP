@@ -1,13 +1,28 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BoxHitCaster : ExpansionMonoBehaviour, IHitCaster
 {
 
-    public void CastingTargets(in CastData data)
+    private GameTag _tag;
+
+    public event Func<CastData, bool> OnCasting;
+
+    private void Awake()
+    {
+        
+        _tag = GetComponent<GameTag>();
+
+    }
+
+    public void CastingDamage(in CastData data)
     {
 
         var hits = Casting(data);
+
+        if (hits == null)
+            return;
 
         foreach (var tag in hits)
         {
@@ -15,13 +30,29 @@ public class BoxHitCaster : ExpansionMonoBehaviour, IHitCaster
             if (tag.HasTag(Tags.Damageable))
             {
 
+                Debug.Log(2);
                 tag.GetComponent<IDamageable>().TakeDamage(data.damage);
 
             }
 
+        }
+
+    }
+
+    public void CastingKnockback(in CastData data)
+    {
+
+        var hits = Casting(data);
+        Debug.Log(-1);
+        if (hits == null)
+            return;
+
+        foreach (var tag in hits)
+        {
+
             if (tag.HasTag(Tags.KnockBackable))
             {
-
+                Debug.Log(3);
                 var hp = tag.GetComponent<IHp>();
 
                 tag.GetComponent<IKnockBackable>()
@@ -31,6 +62,24 @@ public class BoxHitCaster : ExpansionMonoBehaviour, IHitCaster
             }
 
         }
+    }
+
+    public void CastingTargets(in CastData data)
+    {
+
+        if(OnCasting != null)
+            if(!OnCasting(data))
+                return;
+
+        CastingDamage(in data);
+        CastingTargets(in data);
+
+    }
+
+    public Transform GetTransform()
+    {
+
+        return transform;
 
     }
 
@@ -50,6 +99,9 @@ public class BoxHitCaster : ExpansionMonoBehaviour, IHitCaster
                 if (obj.TryGetComponent<GameTag>(out var compo))
                 {
 
+                    if (_tag == compo)
+                        continue;
+
                     if (compo.HasTag(data.targetTag))
                     {
 
@@ -60,6 +112,8 @@ public class BoxHitCaster : ExpansionMonoBehaviour, IHitCaster
                 }
 
             }
+
+            return arr;
 
         }
 
