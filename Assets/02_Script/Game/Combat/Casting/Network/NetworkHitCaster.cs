@@ -43,15 +43,6 @@ public class NetworkHitCaster : ExpansionNetworkBehaviour, ILocalInject
     {
 
         _targetCaster.CastingDamage(in data);
-
-        CastingKnockbackClientRPC(data, OwnerClientId.GetRPCParams(false));
-
-    }
-
-    [ClientRpc]
-    private void CastingKnockbackClientRPC(CastData data, ClientRpcParams @param)
-    {
-
         _targetCaster.CastingKnockback(in data);
 
     }
