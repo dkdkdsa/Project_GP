@@ -57,7 +57,6 @@ public class NetworkScoreUI : ExpansionNetworkBehaviour, ILocalInject
     private void HandleScoreChanged(ulong id, int score)
     {
 
-        Debug.Log(id);
         if (id != OwnerClientId)
             return;
 

@@ -7,6 +7,7 @@ public class NetworkGameManager : NetworkMonoSingleton<NetworkGameManager>
 {
 
     public event Action OnGameStarted;
+    public ITimer<int> EndTimer { get; private set; }
 
     public void StartGame()
     {
@@ -16,7 +17,10 @@ public class NetworkGameManager : NetworkMonoSingleton<NetworkGameManager>
         SpawmMapClientRPC(1);
         SpawnPlayers();
         DropItemManager.Instance.StartDrop();
-        StartCoroutine(WaitEndCo());
+
+        EndTimer = TimerHelper.StartTimer<int, IntTimer>(120);
+        EndTimer.RegisterEndEvent(EndGame);
+
         GameStartClientRPC();
 
     }
@@ -77,15 +81,6 @@ public class NetworkGameManager : NetworkMonoSingleton<NetworkGameManager>
     {
 
         MapManager.Instance.LoadMap(id);
-
-    }
-
-    private IEnumerator WaitEndCo()
-    {
-
-        yield return new WaitForSeconds(120f);
-
-        EndGame();
 
     }
 
