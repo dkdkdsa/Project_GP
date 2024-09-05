@@ -6,34 +6,14 @@ using UnityEngine;
 
 public class BoxBrokenFeedback : EffectFeedback
 {
-    public override event Action OnStartFeedbackEvent;
-    public override event Action OnFinishFeedbackEvent;
-
     public override bool StartFeedback()
     {
-        OnStartFeedbackEvent?.Invoke();
-        bool result = DoStartFeedback();
-
-        return result;
+        return base.StartFeedback();
     }
-
 
     public override bool FinishFeedback()
     {
-        OnFinishFeedbackEvent?.Invoke();
-        bool result = DoFinishFeedback();
-
-        return result;
-    }
-
-    public override bool DoStartFeedback()
-    {
-        return true;
-    }
-
-    public override bool DoFinishFeedback()
-    {
-        return true;
+        return base.FinishFeedback();
     }
 
 }

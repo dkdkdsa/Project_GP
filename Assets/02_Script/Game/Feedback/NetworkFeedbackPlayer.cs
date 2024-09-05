@@ -4,46 +4,36 @@ using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
 
-public class NetworkFeedbackController : ExpansionNetworkBehaviour, ILocalInject
+public class NetworkFeedbackPlayer : ExpansionNetworkBehaviour, ILocalInject
 {
-    private IFeedbackHandler _handler = null;
+    private IFeedbackPlayer _player = null;
 
     public void LocalInject(ComponentList list)
     {
-
+        _player = GetComponent<IFeedbackPlayer>();
     }
 
-    public void SetFeedback(IFeedbackHandler handler)
+    public override void OnNetworkSpawn()
     {
-        if (!IsSpawned)
-        {
-            Debug.LogError("아직 생성되지 않았습니다.");
-
-            return;
-        }
-
-        _handler = handler;
-
-        UnRegister();
         OnRegister();
     }
 
     public void OnRegister()
     {
-        if (_handler != null)
+        if (_player != null)
         {
-            _handler.OnStartFeedbackEvent += HandleStartFeedback;
-            _handler.OnFinishFeedbackEvent += HandleFinishFeedback;
+            _player.OnStartFeedbackEvent += HandleStartFeedback;
+            _player.OnFinishFeedbackEvent += HandleFinishFeedback;
         }
           
     }
 
     public void UnRegister()
     {
-        if (_handler != null)
+        if (_player != null)
         {
-            _handler.OnStartFeedbackEvent -= HandleStartFeedback;
-            _handler.OnFinishFeedbackEvent -= HandleFinishFeedback;
+            _player.OnStartFeedbackEvent -= HandleStartFeedback;
+            _player.OnFinishFeedbackEvent -= HandleFinishFeedback;
         }
     }
 
@@ -72,13 +62,13 @@ public class NetworkFeedbackController : ExpansionNetworkBehaviour, ILocalInject
     [ClientRpc]
     private void StartFeedbackClientRPC(ClientRpcParams clientRpcParams)
     {
-        _handler.DoStartFeedback();
+        _player.DoPlayFeedback();
     }
 
     [ClientRpc]
     private void FinishFeedbackClientRPC(ClientRpcParams clientRpcParams)
     {
-        _handler.DoFinishFeedback();
+        _player.DoFinishFeedback();
     }
 
     public override void OnNetworkDespawn()
