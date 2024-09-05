@@ -15,7 +15,6 @@ public class NetworkHitCaster : ExpansionNetworkBehaviour, ILocalInject
     public override void OnNetworkSpawn()
     {
 
-
         if (IsOwner)
         {
 

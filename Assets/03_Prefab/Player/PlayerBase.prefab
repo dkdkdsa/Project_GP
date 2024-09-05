@@ -55,6 +55,7 @@ GameObject:
   - component: {fileID: 4428197949046076437}
   - component: {fileID: 3223478701611026321}
   - component: {fileID: 3136283524732667007}
+  - component: {fileID: 7214737779149225606}
   m_Layer: 0
   m_Name: PlayerBase
   m_TagString: Untagged
@@ -77,6 +78,7 @@ Transform:
   m_Children:
   - {fileID: 1972942931572388801}
   - {fileID: 6715075536478793528}
+  - {fileID: 5781816636960986838}
   - {fileID: 7891998875497325454}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -344,6 +346,77 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e3a3e4254c5f60418e8715c872f4605, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7214737779149225606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816053758719151284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba0adf74a513f934b972374225af941e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _knockbackFeedback: {fileID: 197910232322989714}
+--- !u!1 &2173070664508995126
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 981684807597936888}
+  - component: {fileID: 197910232322989714}
+  - component: {fileID: 3246673437553042656}
+  m_Layer: 0
+  m_Name: Hit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &981684807597936888
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2173070664508995126}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5781816636960986838}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &197910232322989714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2173070664508995126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ada02887f1b371b448dabef21b4fab2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3246673437553042656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2173070664508995126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 630cc83c7eaf7624bbe5d722fa9d82c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playParticle: {fileID: 674926906803067914, guid: a728298a46833984f8c9629d39a98f31, type: 3}
 --- !u!1 &3960763923404825721
 GameObject:
   m_ObjectHideFlags: 0
@@ -633,5 +706,37 @@ Transform:
   m_Children:
   - {fileID: 2090727262026568163}
   - {fileID: 3943263764610275689}
+  m_Father: {fileID: 7481840064347878466}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &9146988298958230048
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5781816636960986838}
+  m_Layer: 0
+  m_Name: Feedbacks
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5781816636960986838
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9146988298958230048}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 981684807597936888}
   m_Father: {fileID: 7481840064347878466}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

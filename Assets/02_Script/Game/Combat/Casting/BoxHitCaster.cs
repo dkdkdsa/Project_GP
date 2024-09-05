@@ -71,6 +71,8 @@ public class BoxHitCaster : ExpansionMonoBehaviour, IHitCaster
             if(!OnCasting(data))
                 return;
 
+        Debug.Log(1);
+
         CastingDamage(in data);
         CastingTargets(in data);
 
@@ -87,7 +89,7 @@ public class BoxHitCaster : ExpansionMonoBehaviour, IHitCaster
     {
 
         var objs = Physics2D.OverlapBoxAll(transform.position + (Vector3)data.pivot, data.size, 0);
-
+        
         if (objs.Length > 0)
         {
 

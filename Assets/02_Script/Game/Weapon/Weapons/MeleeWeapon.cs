@@ -25,7 +25,7 @@ public class MeleeWeapon : ExpansionMonoBehaviour, IWeapon
     public void Attack(MouseInputType inputType)
     {
 
-        if(_isAttack) return;
+        if(_isAttack || _isAttackFirstDel) return;
 
         var data = _renderer.GetFlip().x ? _data.Reverse() : _data;
 

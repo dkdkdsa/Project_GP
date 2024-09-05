@@ -15,7 +15,8 @@ public class NetworkFeedbackPlayer : ExpansionNetworkBehaviour, ILocalInject
 
     public override void OnNetworkSpawn()
     {
-        OnRegister();
+        if(IsOwner)
+            OnRegister();
     }
 
     public void OnRegister()
@@ -47,13 +48,13 @@ public class NetworkFeedbackPlayer : ExpansionNetworkBehaviour, ILocalInject
         FinishFeedbackServerRPC(NetworkManager.LocalClientId);
     }
 
-    [ServerRpc(RequireOwnership = false)]
+    [ServerRpc]
     private void StartFeedbackServerRPC(ulong localClientId)
     {
         StartFeedbackClientRPC(localClientId.GetRPCParams(false));
     }
 
-    [ServerRpc(RequireOwnership = false)]
+    [ServerRpc]
     private void FinishFeedbackServerRPC(ulong localClientId)
     {
         FinishFeedbackClientRPC(localClientId.GetRPCParams(false));
