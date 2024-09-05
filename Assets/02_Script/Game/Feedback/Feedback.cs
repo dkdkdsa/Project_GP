@@ -4,9 +4,6 @@ using UnityEngine.AI;
 
 public abstract class Feedback : ExpansionMonoBehaviour, IFeedbackHandler
 {
-    public abstract event Action OnStartFeedbackEvent;
-    public abstract event Action OnFinishFeedbackEvent;
-
     public virtual void Awake()
     {
 

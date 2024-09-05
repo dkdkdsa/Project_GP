@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9096404000461079600}
   - component: {fileID: 682136539672940701}
+  - component: {fileID: 7681533594287508592}
   - component: {fileID: 1043001438274254067}
   m_Layer: 6
   m_Name: BrokenEffect
@@ -45,7 +46,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada02887f1b371b448dabef21b4fab2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsNetwork: 1
+--- !u!114 &7681533594287508592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637197908496974496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 771477fd880624d49b6ba2d39e6a8e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1043001438274254067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76,7 +88,6 @@ GameObject:
   - component: {fileID: 457968676021750802}
   - component: {fileID: 1447805793211240069}
   - component: {fileID: 7412470010983504422}
-  - component: {fileID: 1246218066111692784}
   m_Layer: 6
   m_Name: NetworkBox
   m_TagString: Untagged
@@ -315,7 +326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 312624940
+  GlobalObjectIdHash: 4039654187
   InScenePlacedSourceGlobalObjectIdHash: 0
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -324,18 +335,6 @@ MonoBehaviour:
   SpawnWithObservers: 1
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
---- !u!114 &1246218066111692784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5999985685852561134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 771477fd880624d49b6ba2d39e6a8e44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7068616017502243806
 GameObject:
   m_ObjectHideFlags: 0
