@@ -1,8 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using Unity.Netcode;
-using UnityEngine;
 
 public class NetworkHitCaster : ExpansionNetworkBehaviour, ILocalInject
 {
@@ -42,9 +38,17 @@ public class NetworkHitCaster : ExpansionNetworkBehaviour, ILocalInject
     private void SendCastingServerRPC(CastData data)
     {
 
-        _targetCaster.CastingDamage(in data);
-        _targetCaster.CastingKnockback(in data);
+        _targetCaster.CastingDamage(in data, x =>
+        {
 
+            if(x.TryGetComponent<INetworkObjectController>(out var compo))
+            {
+                NetworkGameManager.Instance.AttackPlayer(compo.GetOwner(), OwnerClientId);
+            }
+
+        });
+        _targetCaster.CastingKnockback(in data);
+        
     }
 
 }

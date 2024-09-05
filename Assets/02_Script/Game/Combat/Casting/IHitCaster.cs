@@ -56,7 +56,7 @@ public interface IHitCaster : ITransform
 
     public event Func<CastData, bool> OnCasting;
     public void CastingTargets(in CastData data);
-    public void CastingDamage(in CastData data);
+    public void CastingDamage(in CastData data, Action<GameObject> hitCallback = null);
     public void CastingKnockback(in CastData data);
 
 

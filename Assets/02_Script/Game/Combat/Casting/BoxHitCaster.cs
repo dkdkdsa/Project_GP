@@ -16,7 +16,7 @@ public class BoxHitCaster : ExpansionMonoBehaviour, IHitCaster
 
     }
 
-    public void CastingDamage(in CastData data)
+    public void CastingDamage(in CastData data, Action<GameObject> hitCallback = null)
     {
 
         var hits = Casting(data);
@@ -31,6 +31,7 @@ public class BoxHitCaster : ExpansionMonoBehaviour, IHitCaster
             {
 
                 tag.GetComponent<IDamageable>().TakeDamage(data.damage);
+                hitCallback?.Invoke(tag.gameObject);
 
             }
 

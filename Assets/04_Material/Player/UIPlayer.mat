@@ -499,7 +499,7 @@ Material:
     - _CamouflageNoiseScaleB: {r: 0.25, g: 0.25, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ColorReplaceFromColor: {r: 0.98225087, g: 0.10946172, b: 0.13013652, a: 0}
-    - _ColorReplaceToColor: {r: 0, g: 1, b: 0, a: 0}
+    - _ColorReplaceToColor: {r: 0.7699995, g: 0, b: 1, a: 0}
     - _CustomFadeNoiseScale: {r: 1, g: 1, b: 0, a: 0}
     - _DirectionalAlphaFadeNoiseScale: {r: 0.3, g: 0.3, b: 0, a: 0}
     - _DirectionalDistortionDistortion: {r: 0, g: 0.1, b: 0, a: 0}

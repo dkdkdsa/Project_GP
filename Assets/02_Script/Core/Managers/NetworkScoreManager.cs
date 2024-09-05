@@ -1,8 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NetworkScoreManager : NetworkMonoSingleton<NetworkScoreManager>
+public class NetworkScoreManager : NetworkMonoSingleton<NetworkScoreManager>, IScoreController<ulong, int>
 {
 
     private class AttackObjectData
@@ -18,6 +19,7 @@ public class NetworkScoreManager : NetworkMonoSingleton<NetworkScoreManager>
 
     private Dictionary<ulong, AttackObjectData> _attackDataContainer = new();
     private Dictionary<ulong, int> _scoreContainer = new();
+    private Action<ulong, int> _changeEvent;
 
     public void CatchAttack(ulong targetClient, ulong attackClient)
     {
@@ -32,13 +34,11 @@ public class NetworkScoreManager : NetworkMonoSingleton<NetworkScoreManager>
         var obj = _attackDataContainer[targetClient];
 
         obj.attackClientId = attackClient;
+
         if (obj.coroutine != null)
-        {
-
             StopCoroutine(obj.coroutine);
-            obj.coroutine = StartCoroutine(AttackTargetCo(targetClient));
 
-        }
+        obj.coroutine = StartCoroutine(AttackTargetCo(targetClient));
 
     }
 
@@ -69,9 +69,8 @@ public class NetworkScoreManager : NetworkMonoSingleton<NetworkScoreManager>
 
         }
 
-        _scoreContainer[target]++;
-
-        Debug.Log($"ScoreAdded targetClient : {target}, Score {_scoreContainer[target]}");
+        int score = ++_scoreContainer[target];
+        _changeEvent?.Invoke(target, score);
 
     }
 
@@ -107,5 +106,21 @@ public class NetworkScoreManager : NetworkMonoSingleton<NetworkScoreManager>
 
     }
 
+    public int GetScore(ulong key)
+    {
+
+        return _scoreContainer[key];
+
+    }
+
+    public void RegisterScoreChangeEvent(Action<ulong, int> action)
+    {
+        _changeEvent += action;
+    }
+
+    public void UnRegisterScoreChangeEvent(Action<ulong, int> action)
+    {
+        _changeEvent -= action;
+    }
 
 }

@@ -1,9 +1,12 @@
+using System;
 using System.Collections;
 using Unity.Netcode;
 using UnityEngine;
 
 public class NetworkGameManager : NetworkMonoSingleton<NetworkGameManager>
 {
+
+    public event Action OnGameStarted;
 
     public void StartGame()
     {
@@ -14,6 +17,7 @@ public class NetworkGameManager : NetworkMonoSingleton<NetworkGameManager>
         SpawnPlayers();
         DropItemManager.Instance.StartDrop();
         StartCoroutine(WaitEndCo());
+        GameStartClientRPC();
 
     }
 
@@ -35,6 +39,14 @@ public class NetworkGameManager : NetworkMonoSingleton<NetworkGameManager>
             PlayerManager.Instance.SpawnNetworkPlayer(id);
 
         }
+
+    }
+
+    [ClientRpc]
+    private void GameStartClientRPC()
+    {
+
+        OnGameStarted?.Invoke();
 
     }
 
@@ -71,7 +83,7 @@ public class NetworkGameManager : NetworkMonoSingleton<NetworkGameManager>
     private IEnumerator WaitEndCo()
     {
 
-        yield return new WaitForSeconds(30f);
+        yield return new WaitForSeconds(120f);
 
         EndGame();
 
