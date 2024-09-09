@@ -46,4 +46,11 @@ public class DataManager : MonoSingleton<DataManager>
 
     public Action<string, string> OnChangedPlayerNameEvent = null;
 
+    private void Awake()
+    {
+
+        DontDestroyOnLoad(gameObject);
+
+    }
+
 }

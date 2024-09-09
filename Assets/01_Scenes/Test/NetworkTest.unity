@@ -2118,7 +2118,7 @@ GameObject:
   - component: {fileID: 1997947406}
   - component: {fileID: 1997947412}
   m_Layer: 0
-  m_Name: Square (1)
+  m_Name: DieCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

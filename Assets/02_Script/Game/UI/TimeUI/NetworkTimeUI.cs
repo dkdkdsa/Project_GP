@@ -26,16 +26,27 @@ public class NetworkTimeUI : ExpansionNetworkBehaviour, ILocalInject
         {
 
             NetworkGameManager.Instance.EndTimer.RegisterEvent(HandleTimeChanged);
-            NetworkGameManager.Instance.EndTimer.RegisterEndEvent(HandleGameEnd);
+            NetworkGameManager.Instance.OnWinEvent += HandleGameEnd;
 
         }
 
     }
 
-    private void HandleGameEnd()
+    private void HandleGameEnd(ulong end)
     {
 
-        ChangeGameEndClientRPC();
+        string str = "동점";
+
+        if(end != ulong.MaxValue)
+        {
+
+            var data = HostSingle.Instance.GameManager.NetServer.GetUserDataByClientID(end);
+
+            str = $"승리 : {data.Value.nickName}";
+
+        }
+
+        ChangeGameEndClientRPC(str);
 
     }
 
@@ -55,10 +66,10 @@ public class NetworkTimeUI : ExpansionNetworkBehaviour, ILocalInject
     }
 
     [ClientRpc]
-    private void ChangeGameEndClientRPC()
+    private void ChangeGameEndClientRPC(string str)
     {
 
-        _timeUI.SetText("게임종료");
+        _timeUI.SetText(str);
 
     }
 

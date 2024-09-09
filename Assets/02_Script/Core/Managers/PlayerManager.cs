@@ -25,7 +25,7 @@ public class PlayerManager : MonoSingleton<PlayerManager>, ILocalInject
     {
 
         var player = SpawnPlayer();
-        player.GetComponent<NetworkObject>().SpawnAsPlayerObject(id);
+        player.GetComponent<NetworkObject>().SpawnAsPlayerObject(id, true);
 
     }
 

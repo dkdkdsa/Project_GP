@@ -1,7 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
 
 public class FactoryContainer : MonoSingleton<FactoryContainer>
 {
@@ -26,13 +24,13 @@ public class FactoryContainer : MonoSingleton<FactoryContainer>
     public IFactory<T> GetFactory<T>()
     {
 
-        if(_factorys == null)
+        if (_factorys == null)
             InitContainer();
 
-        foreach(var item in _factorys)
+        foreach (var item in _factorys)
         {
 
-            if(item is IFactory<T>)
+            if (item is IFactory<T>)
                 return item.Cast<IFactory<T>>();
 
         }

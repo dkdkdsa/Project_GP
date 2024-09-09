@@ -20,6 +20,8 @@ public class PlayerNameText : MonoBehaviour
 
     private void OnDisable()
     {
+        if (DataManager.Instance == null)
+            return;
         DataManager.Instance.OnChangedPlayerNameEvent -= OnChangedPlayerNameEventHandler;
     }
 

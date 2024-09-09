@@ -1,3 +1,4 @@
+using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,6 +9,13 @@ public class SceneLoader : MonoBehaviour
     {
 
         SceneManager.LoadScene(sceneName);
+
+    }
+
+    public void LoadSceneNetwork(string sceneName)
+    {
+
+        NetworkManager.Singleton.SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
 
     }
 

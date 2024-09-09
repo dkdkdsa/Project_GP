@@ -2915,6 +2915,7 @@ GameObject:
   - component: {fileID: 316715693}
   - component: {fileID: 316715692}
   - component: {fileID: 316715691}
+  - component: {fileID: 316715694}
   m_Layer: 5
   m_Name: Check_Btn
   m_TagString: Untagged
@@ -2985,7 +2986,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 316715692}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 316715694}
+        m_TargetAssemblyTypeName: JoinRoomUI, Assembly-CSharp
+        m_MethodName: Load
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &316715692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3024,6 +3037,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 316715689}
   m_CullTransparentMesh: 1
+--- !u!114 &316715694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 316715689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a9f760dda494154095d75928379cc81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inputField: {fileID: 243840417}
 --- !u!1 &322765993
 GameObject:
   m_ObjectHideFlags: 0
@@ -5801,6 +5827,7 @@ GameObject:
   - component: {fileID: 689505349}
   - component: {fileID: 689505348}
   - component: {fileID: 689505347}
+  - component: {fileID: 689505350}
   m_Layer: 5
   m_Name: CreateRoomUI
   m_TagString: Untagged
@@ -5946,7 +5973,19 @@ MonoBehaviour:
   _lobbyNameField: {fileID: 1927909072}
   OnSuccessEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 689505350}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: LoadSceneNetwork
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: LobbySceneTest
+          m_BoolArgument: 0
+        m_CallState: 2
   OnFailureEvent:
     m_PersistentCalls:
       m_Calls:
@@ -5963,6 +6002,18 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   _maxCharacterCount: 12
+--- !u!114 &689505350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689505345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07ac5c3690cb29546a083716be656076, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &690122618
 GameObject:
   m_ObjectHideFlags: 0

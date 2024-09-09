@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Unity.Jobs;
+using Unity.Netcode;
 using Unity.Services.Authentication;
 using Unity.Services.Core;
 using Unity.Services.Lobbies;
@@ -74,7 +75,7 @@ public class AppController : MonoSingleton<AppController>
 
             nickName = username,
             authId = AuthenticationService.Instance.PlayerId,
-            color = color,
+            color = PlayerColor.GetColor(DataManager.Instance.PlayerColorType),
 
         };
 

@@ -47,6 +47,9 @@ public class CreateRoomUI : UIComponent
         string name = DataManager.Instance.PlayerName;
 
         await AppController.Instance.StartHostAsync(name, _lobbyNameField.text);
+
+        OnSuccessEvent?.Invoke();
+
     }
 
     private void OnCreateRoom(string inputText)
@@ -58,7 +61,6 @@ public class CreateRoomUI : UIComponent
             DataManager.Instance.RoomName = inputText;
             _canCreatedRoom = true;
 
-            OnSuccessEvent?.Invoke();
         }
         else
         {

@@ -2,11 +2,13 @@ using System;
 using System.Collections;
 using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NetworkGameManager : NetworkMonoSingleton<NetworkGameManager>
 {
 
     public event Action OnGameStarted;
+    public event Action<ulong> OnWinEvent;
     public ITimer<int> EndTimer { get; private set; }
 
     public void StartGame()
@@ -18,7 +20,7 @@ public class NetworkGameManager : NetworkMonoSingleton<NetworkGameManager>
         SpawnPlayers();
         DropItemManager.Instance.StartDrop();
 
-        EndTimer = TimerHelper.StartTimer<int, IntTimer>(120);
+        EndTimer = TimerHelper.StartTimer<int, IntTimer>(30);
         EndTimer.RegisterEndEvent(EndGame);
 
         GameStartClientRPC();
@@ -29,8 +31,16 @@ public class NetworkGameManager : NetworkMonoSingleton<NetworkGameManager>
     {
 
         ulong winClientId = NetworkScoreManager.Instance.GetHighScoreId();
+        OnWinEvent?.Invoke(winClientId);
 
-        Debug.Log($"Win! : {winClientId}");
+        var t = TimerHelper.StartTimer<int, IntTimer>(10);
+        t.RegisterEndEvent(async () =>
+        {
+
+            NetworkManager.SceneManager.LoadScene("MainMenuSceneTest", LoadSceneMode.Single);
+            await HostSingle.Instance.GameManager.ShutdownAsync();
+
+        });
 
     }
 
