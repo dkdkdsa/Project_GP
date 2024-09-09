@@ -23,6 +23,7 @@ public class HostGameManager : IDisposable
 
     public NetworkServer NetServer { get; private set; }
     public string JoinCode => _joinCode;
+    public string LobbyId => _lobbyId;
 
     public event Action<string, ulong> OnPlayerConnect;
     public event Action<string, ulong> OnPlayerDisconnect;
