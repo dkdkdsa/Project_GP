@@ -20,7 +20,7 @@ public class NetworkGameManager : NetworkMonoSingleton<NetworkGameManager>
         SpawnPlayers();
         DropItemManager.Instance.StartDrop();
 
-        EndTimer = TimerHelper.StartTimer<int, IntTimer>(30);
+        EndTimer = TimerHelper.StartTimer<int, IntTimer>(120);
         EndTimer.RegisterEndEvent(EndGame);
 
         GameStartClientRPC();
